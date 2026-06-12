@@ -7,6 +7,7 @@ date: 2024-12-04T19:36:02.000Z
 excerpt: "O Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” (NEPPs) realizou, em 13 de novembro de 2024, o I Seminário de Análise de Conjuntura, que marcou o início …"
 image: "/imagens/wp/WhatsApp-Image-2024-12-03-at-11.01.21-1-e1734063669541.jpeg"
 tags: ["eventos"]
+featured: true
 # original: https://nepps.org/2024/12/04/nepps-inaugura-serie-de-seminarios-sobre-analise-de-conjuntura/
 ---
 

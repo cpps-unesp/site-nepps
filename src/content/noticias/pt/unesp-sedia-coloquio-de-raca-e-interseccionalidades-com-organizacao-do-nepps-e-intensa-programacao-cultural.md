@@ -7,6 +7,7 @@ date: 2026-05-21T19:58:28.000Z
 excerpt: "Entre os dias 19 e 22 de maio, a Faculdade de Ciências Humanas e Sociais (FCHS) – UNESP recebe o Colóquio de Raça e Interseccionalidades, um evento de grande relevância …"
 image: "/imagens/wp/Captura-de-tela-2026-05-21-165401-e1779393729482.png"
 tags: ["eventos"]
+featured: true
 # original: https://nepps.org/2026/05/21/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural/
 ---
 

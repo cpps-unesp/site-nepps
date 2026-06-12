@@ -7,6 +7,7 @@ date: 2025-11-09T15:09:22.000Z
 excerpt: "O Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” (NEPPs) da UNESP Franca acaba de lançar sua primeira edição do boletim “Políticas Públicas em Foco”. A publicação trimestral …"
 image: "/imagens/wp/Captura-de-tela-2025-11-09-120619-e1762700910502.png"
 tags: ["publicações"]
+featured: true
 # original: https://nepps.org/2025/11/09/nepps-lanca-boletim-trimestral-para-aproximar-pesquisa-academica-e-sociedade/
 ---
 

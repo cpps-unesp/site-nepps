@@ -7,6 +7,7 @@ date: 2025-08-13T13:25:23.000Z
 excerpt: "O Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” (NEPPs), vinculado à UNESP/FCHS de Franca, marcou presença significativa no primeiro encontro para construção do Protocolo de Gênero para …"
 image: "/imagens/wp/Captura-de-tela-2025-08-13-102735-e1755091707636.png"
 tags: ["eventos"]
+featured: true
 # original: https://nepps.org/2025/08/13/pesquisadores-do-nepps-unesp-participam-da-construcao-do-1o-protocolo-de-genero-para-governos-locais-da-america-latina/
 ---
 

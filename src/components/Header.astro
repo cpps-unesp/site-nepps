@@ -11,22 +11,87 @@ interface Props {
 }
 const { lang, pathInLang = '', availableLangs = [...LANGUAGES] } = Astro.props;
 
-const navItems = [
-  { href: localizedPath(lang, 'institucional'), label: t(lang, 'nav.institucional') },
-  { href: localizedPath(lang, 'pesquisas'), label: t(lang, 'nav.pesquisas') },
-  { href: localizedPath(lang, 'publicacoes'), label: t(lang, 'nav.publicacoes') },
-  { href: localizedPath(lang, 'noticias'), label: t(lang, 'nav.noticias') },
-  { href: localizedPath(lang, 'equipe'), label: t(lang, 'nav.equipe') },
+type NavItem = { label: string; href?: string; children?: { label: string; href: string }[] };
+
+// Estrutura do menu do site original (nepps.org), com os mesmos grupos e itens
+const p = (slug: string) => localizedPath(lang, slug);
+const navItems: NavItem[] = [
+  {
+    label: 'NEPPS',
+    children: [
+      { label: 'Nossa história', href: p('historia') },
+      { label: 'Institucional', href: p('institucional') },
+      { label: 'Equipe', href: p('equipe') },
+      { label: 'Comunicações Internas', href: p('comunicacoes-internas') },
+    ],
+  },
+  {
+    label: 'Pesquisa',
+    children: [
+      { label: 'Projetos | Em andamento', href: p('pesquisa-em-andamento') },
+      { label: 'Análise de conjuntura', href: p('analise-de-conjuntura') },
+      { label: 'Projetos | Concluídos', href: p('pesquisa-concluidas') },
+    ],
+  },
+  {
+    label: 'Extensão',
+    children: [
+      { label: 'Observatório de Políticas Públicas', href: p('observatorio-de-politicas-publicas') },
+    ],
+  },
+  {
+    label: 'Parcerias',
+    children: [
+      { label: 'Observatório dos Conselhos/UFPR', href: p('observatorio-dos-conselhos') },
+      { label: 'LAP2D/UnB', href: p('lap2d') },
+      { label: 'Redalint', href: p('redalint') },
+      { label: 'UNIVAP', href: p('universidade-do-vale-do-paraiba-univap') },
+      { label: 'LabRI/UNESP', href: p('laboratorio-de-relacoes-internacionais-labri') },
+      { label: 'IUPERJ', href: p('instituto-universitario-de-pesquisas-do-rio-de-janeiro-iuperj') },
+      { label: 'FoMerco', href: p('fomerco-forum-universitario-mercosul') },
+      { label: 'GP-Sul/UFS', href: p('grupo-de-pesquisa-sobre-politica-internacional-e-sul-americana-gp-sul') },
+      { label: 'ANEPECP', href: p('associacao-nacional-de-ensino-pesquisa-e-extensao-em-politicas-publicas-anepecp') },
+    ],
+  },
+  {
+    label: 'Eventos',
+    children: [
+      { label: 'Aniversário de 10 anos NEPPs', href: p('aniversario-de-10-anos-nepps') },
+      { label: 'IV Seminário NEPPs', href: p('anais-do-iv-seminario-nepps-neoliberalismo-como-racionalidade-e-a-atualidade-critica-das-politicas-publicas') },
+      { label: 'III Seminário NEPPs', href: p('anais-do-iii-seminario-nepps-2017') },
+      { label: 'II Seminário NEPPs', href: p('ii-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-no-brasil-uma-agenda-de-pesquisa') },
+      { label: 'I Seminário NEPPS', href: p('i-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-definicoes-e-debates') },
+      { label: 'II Seminário APLIS', href: p('ii-seminario-aplis') },
+      { label: 'I Seminário APLIS', href: p('i-seminario-aplis') },
+      { label: 'Outros eventos', href: p('outros-eventos') },
+    ],
+  },
+  {
+    label: 'Publicações',
+    children: [
+      { label: 'Anais', href: p('anais') },
+      { label: 'Dossiês', href: p('dossies') },
+      { label: 'Artigos', href: p('artigos') },
+      { label: 'Capítulo de livros', href: p('capitulo-de-livros') },
+      { label: 'Jornais de notícias', href: p('jornais-de-noticias') },
+      { label: 'Livros', href: p('livros') },
+    ],
+  },
+  { label: 'Apoios Institucionais', href: p('parcerias') },
+  { label: 'Notícias', href: p('noticias') },
+  { label: 'Contato', href: p('contato') },
 ];
 
 const showLangPicker = LANGUAGES.length > 1;
 const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negativo-e1623613930590.png`.replace(/\/+/g, '/');
+const linkCls =
+  'px-2 xl:px-3 py-2 text-xs xl:text-sm font-semibold uppercase tracking-wide whitespace-nowrap rounded text-secondary transition-colors hover:bg-white hover:text-warning';
 ---
 
 <!-- Barra única roxa como no site original (OnePress: .site-header #2c0963,
      menu #00afef com hover amarelo sobre branco) -->
 <header class="sticky top-0 z-30 shadow-sm bg-primary text-primary-content">
-  <div class="container mx-auto px-4 flex items-center justify-between gap-4 py-2.5">
+  <div class="container mx-auto px-4 flex items-center justify-between gap-2 py-2.5">
     <a href={localizedPath(lang, '')} class="block shrink-0" aria-label="NEPPs — Início">
       <img
         src={logo}
@@ -37,17 +102,30 @@ const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negati
       />
     </a>
 
-    <div class="flex items-center gap-1 min-w-0">
-      <nav class="hidden lg:flex items-center gap-1 overflow-x-auto" aria-label={t(lang, 'a11y.nav_main')}>
+    <div class="flex items-center gap-0.5 min-w-0">
+      <nav class="hidden lg:flex items-center" aria-label={t(lang, 'a11y.nav_main')}>
         {
-          navItems.map((item) => (
-            <a
-              href={item.href}
-              class="px-3 py-2 text-sm font-semibold uppercase tracking-wide whitespace-nowrap rounded text-secondary transition-colors hover:bg-white hover:text-warning"
-            >
-              {item.label}
-            </a>
-          ))
+          navItems.map((item) =>
+            item.children ? (
+              <div class="dropdown dropdown-hover">
+                <button class={linkCls} aria-haspopup="true">
+                  {item.label}
+                  <svg class="inline ml-0.5 -mt-0.5" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <ul class="dropdown-content menu bg-base-100 text-base-content rounded-box shadow-lg border border-base-300 w-72 z-40 p-2">
+                  {item.children.map((c) => (
+                    <li>
+                      <a href={c.href} class="text-sm">{c.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <a href={item.href} class={linkCls}>{item.label}</a>
+            ),
+          )
         }
       </nav>
 
@@ -69,9 +147,6 @@ const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negati
             aria-label={t(lang, 'nav.language')}
           >
             {lang.toUpperCase()}
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
           </button>
           <ul class="dropdown-content menu bg-base-100 text-base-content rounded-box shadow border border-base-300 mt-2 w-36 z-40">
             {LANGUAGES.map((l) => (
@@ -98,12 +173,23 @@ const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negati
             <line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </summary>
-        <ul class="dropdown-content menu bg-base-100 text-base-content rounded-box shadow border border-base-300 mt-2 w-60 z-40">
-          {navItems.map((item) => (
-            <li>
-              <a href={item.href}>{item.label}</a>
-            </li>
-          ))}
+        <ul class="dropdown-content menu menu-sm bg-base-100 text-base-content rounded-box shadow border border-base-300 mt-2 w-72 max-h-[70vh] overflow-y-auto flex-nowrap z-40">
+          {navItems.map((item) =>
+            item.children ? (
+              <li>
+                <details>
+                  <summary class="font-semibold">{item.label}</summary>
+                  <ul>
+                    {item.children.map((c) => (
+                      <li><a href={c.href}>{c.label}</a></li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            ) : (
+              <li><a href={item.href} class="font-semibold">{item.label}</a></li>
+            ),
+          )}
         </ul>
       </details>
     </div>
