@@ -29,6 +29,13 @@ const ROOT = path.resolve(__dirname, '..');
 const WP_BASE = (process.env.WP_BASE ?? 'https://nepps.org').replace(/\/+$/, '');
 const WP_HOST = new URL(WP_BASE).host.replace(/^www\./, '');
 const noImages = process.argv.includes('--no-images');
+const onlyArg = process.argv.find((a) => a.startsWith('--only'));
+const ONLY = new Set(
+  (onlyArg?.includes('=') ? onlyArg.split('=')[1] : process.argv[process.argv.indexOf('--only') + 1] || '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean),
+);
 
 const UA =
   'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
@@ -50,11 +57,23 @@ const td = new TurndownService({
   emDelimiter: '_',
 });
 
+// Blocos de layout do Gutenberg (colunas, media-text, separadores) são
+// mantidos como HTML cru no markdown — o CSS de src/styles/global.css
+// reproduz o layout original (ex.: fotos ao lado do texto na equipe).
+td.keep((node) => {
+  const cls = node.getAttribute?.('class') ?? '';
+  return /\bwp-block-(columns|media-text|group|separator)\b/.test(cls);
+});
+
 // Preserva figuras (com legenda e link envolvente, ex.: badges Lattes/ORCID)
 td.addRule('figure', {
   filter: 'figure',
   replacement(content, node) {
-    const img = node.querySelector?.('img');
+    // galerias (vários <img>) mantêm o HTML do bloco; o CSS faz o grid
+    const imgs = node.querySelectorAll?.('img') ?? [];
+    const cls = node.getAttribute?.('class') ?? '';
+    if (imgs.length > 1 || /wp-block-gallery/.test(cls)) return '\n\n' + node.outerHTML + '\n\n';
+    const img = imgs[0];
     const cap = node.querySelector?.('figcaption');
     if (!img) return content;
     const src = img.getAttribute('src') ?? '';
@@ -101,12 +120,14 @@ async function main() {
   const stats = { paginas: 0, noticias: 0, raw: 0 };
 
   for (const item of pages) {
+    if (ONLY.size && !ONLY.has(item.slug)) continue;
     if (item.parent) {
       console.log(`  ! página "${item.slug}" tem parent=${item.parent} — gravando plana`);
     }
     await writeEntry({ item, isNews: false, internalRoutes, imageJobs, stats });
   }
   for (const item of posts) {
+    if (ONLY.size && !ONLY.has(item.slug)) continue;
     await writeEntry({ item, isNews: true, internalRoutes, imageJobs, stats });
   }
 
@@ -147,6 +168,15 @@ async function writeEntry({ item, isNews, internalRoutes, imageJobs, stats }) {
   const { md: mdImages, images } = rewriteImageUrls(md);
   md = mdImages;
   for (const [url, local] of images) imageJobs.set(url, local);
+  // imagens dentro de HTML mantido (blocos Gutenberg)
+  md = md
+    .replace(/\s+(?:srcset|sizes)="[^"]*"/g, '')
+    .replace(/(src=")(https?:[^"]+)(")/g, (m, a, url, b) => {
+      if (!isWpAsset(url)) return m;
+      const local = `/imagens/wp/${path.basename(new URL(url).pathname)}`;
+      imageJobs.set(url, local);
+      return a + local + b;
+    });
 
   let description = '';
   let image = featuredImage(item, imageJobs);
