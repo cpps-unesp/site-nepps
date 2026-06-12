@@ -53,7 +53,18 @@ export async function downloadImages(jobs) {
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   const manifestPath = path.join(__dirname, 'wp-images.json');
-  const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
+  let raw;
+  try {
+    raw = await fs.readFile(manifestPath, 'utf8');
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      // Sem manifest (ex.: antes da primeira migração): nada a baixar.
+      console.log(`> ${path.relative(ROOT, manifestPath)} não existe — nada a fazer.`);
+      process.exit(0);
+    }
+    throw err;
+  }
+  const manifest = JSON.parse(raw);
   const jobs = Object.entries(manifest);
   console.log(`> Baixando ${jobs.length} imagens de ${path.relative(ROOT, manifestPath)}…`);
   const { fail } = await downloadImages(jobs);
