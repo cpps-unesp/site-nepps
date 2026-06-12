@@ -24,22 +24,19 @@ const latest = (await getCollection('noticias', (e) => e.data.lang === lang))
   description={t(lang, 'site.tagline')}
   pathInLang=""
 >
-  <!-- HERO -->
-  <section class="relative overflow-hidden bg-base-200">
-    <div class="container mx-auto px-4 py-20 md:py-28 max-w-3xl">
-      <p class="text-primary font-bold uppercase tracking-widest text-sm">NEPPs</p>
-      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mt-3 leading-tight text-balance">
-        {t(lang, 'home.welcome')}
+  <!-- HERO: como no original — nome do núcleo centrado sobre fundo escuro,
+       com CTAs "Quem somos" e "Notícias" -->
+  <section class="relative overflow-hidden bg-primary text-primary-content">
+    <div class="container mx-auto px-4 py-24 md:py-32 max-w-4xl text-center">
+      <h1 class="font-display text-3xl md:text-5xl font-bold leading-tight text-balance">
+        {t(lang, 'site.name_full')}
       </h1>
-      <p class="mt-6 text-lg opacity-80 text-balance">
-        {t(lang, 'site.tagline')}
-      </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a class="btn btn-primary" href={localizedPath(lang, 'institucional')}>
-          {t(lang, 'home.cta_institucional')}
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a class="btn bg-base-100 text-primary border-none hover:bg-base-200" href={localizedPath(lang, 'institucional')}>
+          {t(lang, 'home.cta_sobre')}
         </a>
-        <a class="btn btn-outline btn-primary" href={localizedPath(lang, 'pesquisas')}>
-          {t(lang, 'home.cta_pesquisas')}
+        <a class="btn btn-outline text-secondary border-secondary hover:bg-secondary hover:text-secondary-content" href={localizedPath(lang, 'noticias')}>
+          {t(lang, 'nav.noticias')}
         </a>
       </div>
     </div>

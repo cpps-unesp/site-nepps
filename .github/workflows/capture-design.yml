@@ -1,0 +1,73 @@
+name: Capturar referência visual do WordPress
+
+# Baixa a home de nepps.org e suas folhas de estilo para docs/design-ref/,
+# como referência para replicar a identidade visual no tema Astro.
+# O sandbox de desenvolvimento não tem acesso de rede ao WordPress;
+# os runners do Actions têm. Roda manualmente ou ao alterar este arquivo
+# em uma branch de trabalho.
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths:
+      - .github/workflows/capture-design.yml
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Capturar home e CSS
+        run: |
+          node - <<'EOF'
+          import fs from 'node:fs/promises';
+          const BASE = 'https://nepps.org';
+          const UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+          const get = async (url) => {
+            const res = await fetch(url, { headers: { 'User-Agent': UA } });
+            if (!res.ok) throw new Error(`${url} -> HTTP ${res.status}`);
+            return res;
+          };
+          await fs.mkdir('docs/design-ref/css', { recursive: true });
+          const html = await (await get(BASE + '/')).text();
+          await fs.writeFile('docs/design-ref/home.html', html);
+          const links = [...html.matchAll(/<link[^>]+rel=["']stylesheet["'][^>]*>/gi)]
+            .map((m) => /href=["']([^"']+)["']/.exec(m[0])?.[1])
+            .filter(Boolean)
+            .map((h) => new URL(h, BASE).toString())
+            .filter((u) => u.includes('nepps.org'));
+          console.log(`stylesheets: ${links.length}`);
+          let i = 0;
+          for (const u of links.slice(0, 20)) {
+            try {
+              const css = await (await get(u)).text();
+              const name = String(i++).padStart(2, '0') + '-' + (u.split('/').pop() || 'style.css').split('?')[0];
+              await fs.writeFile(`docs/design-ref/css/${name}`, `/* ${u} */\n` + css);
+              console.log('  ✓', name);
+            } catch (e) { console.warn('  !', u, e.message); }
+          }
+          const icons = [...html.matchAll(/<link[^>]+rel=["'](?:icon|apple-touch-icon)["'][^>]*>/gi)]
+            .map((m) => /href=["']([^"']+)["']/.exec(m[0])?.[1])
+            .filter(Boolean);
+          await fs.writeFile('docs/design-ref/icons.txt', icons.join('\n') + '\n');
+          console.log('icons:', icons.join(' | ') || 'nenhum');
+          EOF
+        shell: bash
+      - name: Commitar referência
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/design-ref
+          if git diff --cached --quiet; then
+            echo "Sem mudanças."
+          else
+            git commit -m "docs: captura referência visual de nepps.org"
+            git push
+          fi

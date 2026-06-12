@@ -1,18 +1,14 @@
 name: Migrar conteúdo do WordPress (REST)
 
 # Busca o conteúdo publicado de nepps.org via REST API (wp-json), converte
-# em MDX (scripts/wp-rest-to-mdx.mjs), baixa as imagens e commita tudo na
-# própria branch. Útil porque o sandbox de desenvolvimento não tem acesso
+# em Markdown (scripts/wp-rest-to-mdx.mjs), baixa as imagens e commita tudo
+# na própria branch. Útil porque o sandbox de desenvolvimento não tem acesso
 # de rede ao WordPress — os runners do Actions têm.
-# Roda manualmente (Actions → Run workflow) ou ao alterar este arquivo em
-# uma branch claude/**.
+# Roda apenas manualmente (Actions → Run workflow): a reconversão sobrescreve
+# a curadoria manual feita em src/content/.
 
 on:
   workflow_dispatch:
-  push:
-    branches: ['claude/**']
-    paths:
-      - .github/workflows/migrate-wp.yml
 
 permissions:
   contents: write

@@ -8,7 +8,7 @@ name: Fixar imagens do WordPress
 on:
   workflow_dispatch:
   push:
-    branches: ['claude/**']
+    branches-ignore: [main]
     paths:
       - scripts/wp-images.json
       - .github/workflows/fetch-wp-images.yml
