@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import SectionBand from '~/components/SectionBand.astro';
+import NoticiaCard from '~/components/NoticiaCard.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+import { localizedPath } from '~/utils/paths';
+import { entrySlug } from '~/utils/content';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+const latest = (await getCollection('noticias', (e) => e.data.lang === lang))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout
+  lang={lang}
+  title={t(lang, 'site.title')}
+  description={t(lang, 'site.tagline')}
+  pathInLang=""
+>
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-base-200">
+    <div class="container mx-auto px-4 py-20 md:py-28 max-w-3xl">
+      <p class="text-primary font-bold uppercase tracking-widest text-sm">NEPPS</p>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary mt-3 leading-tight text-balance">
+        {t(lang, 'home.welcome')}
+      </h1>
+      <p class="mt-6 text-lg opacity-80 text-balance">
+        {t(lang, 'site.tagline')}
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="btn btn-primary" href={localizedPath(lang, 'institucional')}>
+          {t(lang, 'home.cta_institucional')}
+        </a>
+        <a class="btn btn-outline btn-primary" href={localizedPath(lang, 'pesquisas')}>
+          {t(lang, 'home.cta_pesquisas')}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <SectionBand variant="primary">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="section-title text-3xl md:text-4xl">{t(lang, 'home.about_title')}</h2>
+      <div class="section-divider mx-auto mt-4"></div>
+      <p class="mt-6 text-lg leading-relaxed opacity-95">
+        {t(lang, 'home.about_body')}
+      </p>
+      <div class="mt-8">
+        <a class="btn bg-base-100 text-primary border-none hover:bg-base-200" href={localizedPath(lang, 'institucional')}>
+          {t(lang, 'home.cta_institucional')}
+        </a>
+      </div>
+    </div>
+  </SectionBand>
+
+  <!-- PESQUISAS -->
+  <SectionBand>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="section-title text-3xl text-primary">{t(lang, 'home.research_title')}</h2>
+        <div class="section-divider mt-3"></div>
+        <p class="mt-5 opacity-80 text-lg">{t(lang, 'home.research_body')}</p>
+        <a class="btn btn-primary mt-6" href={localizedPath(lang, 'pesquisas')}>
+          {t(lang, 'home.cta_pesquisas')}
+        </a>
+      </div>
+      <div class="bg-base-200 rounded-box aspect-[4/3] flex items-center justify-center">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-primary/40" aria-hidden="true">
+          <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+          <rect x="9" y="3" width="6" height="4" rx="1"/>
+          <path d="M9 12h6M9 16h6"/>
+        </svg>
+      </div>
+    </div>
+  </SectionBand>
+
+  <!-- PUBLICAÇÕES -->
+  <SectionBand>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="md:order-2">
+        <h2 class="section-title text-3xl text-primary">{t(lang, 'home.publications_title')}</h2>
+        <div class="section-divider mt-3"></div>
+        <p class="mt-5 opacity-80 text-lg">{t(lang, 'home.publications_body')}</p>
+        <a class="btn btn-primary mt-6" href={localizedPath(lang, 'publicacoes')}>
+          {t(lang, 'home.cta_publicacoes')}
+        </a>
+      </div>
+      <div class="md:order-1 bg-base-200 rounded-box aspect-[4/3] flex items-center justify-center">
+        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-primary/40" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      </div>
+    </div>
+  </SectionBand>
+
+  <!-- NOTÍCIAS -->
+  <SectionBand>
+    <div class="text-center">
+      <h2 class="section-title text-3xl md:text-4xl text-primary">{t(lang, 'home.news_title')}</h2>
+      <div class="section-divider mx-auto mt-4"></div>
+      <p class="mt-4 opacity-80">{t(lang, 'home.news_body')}</p>
+    </div>
+
+    {latest.length === 0 ? (
+      <p class="text-center opacity-70 mt-10">{t(lang, 'news.empty')}</p>
+    ) : (
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+        {latest.map((n) => (
+          <NoticiaCard
+            lang={lang}
+            slug={entrySlug(n)}
+            title={n.data.title}
+            date={n.data.date}
+            excerpt={n.data.excerpt}
+            image={n.data.image}
+          />
+        ))}
+      </div>
+    )}
+
+    <div class="text-center mt-10">
+      <a class="btn btn-primary" href={localizedPath(lang, 'noticias')}>
+        {t(lang, 'home.news_more')}
+      </a>
+    </div>
+  </SectionBand>
+
+  <!-- EQUIPE -->
+  <SectionBand variant="primary">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="section-title text-3xl md:text-4xl">{t(lang, 'home.team_title')}</h2>
+      <div class="section-divider mx-auto mt-4"></div>
+      <p class="mt-6 text-lg opacity-95">{t(lang, 'home.team_body')}</p>
+      <a class="btn bg-base-100 text-primary border-none hover:bg-base-200 mt-8" href={localizedPath(lang, 'equipe')}>
+        {t(lang, 'home.cta_equipe')}
+      </a>
+    </div>
+  </SectionBand>
+</BaseLayout>

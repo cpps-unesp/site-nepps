@@ -1,0 +1,24 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  ctaHref?: string;
+  ctaLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+}
+const { title, subtitle, ctaHref, ctaLabel, secondaryHref, secondaryLabel } = Astro.props;
+---
+
+<section class="hero bg-gradient-to-br from-primary/10 via-base-100 to-secondary/10">
+  <div class="container mx-auto px-4 py-20 md:py-28 text-center max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-balance">{title}</h1>
+    {subtitle && <p class="mt-6 text-lg opacity-80 text-balance">{subtitle}</p>}
+    {(ctaHref || secondaryHref) && (
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        {ctaHref && ctaLabel && <a class="btn btn-primary" href={ctaHref}>{ctaLabel}</a>}
+        {secondaryHref && secondaryLabel && <a class="btn btn-ghost" href={secondaryHref}>{secondaryLabel}</a>}
+      </div>
+    )}
+  </div>
+</section>

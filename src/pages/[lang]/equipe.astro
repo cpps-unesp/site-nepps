@@ -1,0 +1,108 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+import { assetPath, localizedPath } from '~/utils/paths';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+
+// bios ainda só em pt: usa-as como fallback nos demais idiomas
+let membros = await getCollection('equipe', (e) => e.data.lang === lang);
+if (membros.length === 0) {
+  membros = await getCollection('equipe', (e) => e.data.lang === 'pt');
+}
+membros.sort((a, b) => a.data.order - b.data.order);
+
+const rendered = await Promise.all(
+  membros.map(async (m) => ({ membro: m, Content: (await render(m)).Content })),
+);
+---
+
+<BaseLayout
+  lang={lang}
+  title={t(lang, 'nav.equipe')}
+  description={t(lang, 'home.team_body')}
+  pathInLang="equipe"
+>
+  <section class="container mx-auto px-4 py-12 max-w-5xl">
+    <Breadcrumbs lang={lang} trail={[{ label: t(lang, 'nav.equipe') }]} />
+    <h1 class="text-3xl md:text-4xl font-bold">{t(lang, 'nav.equipe')} NEPPS</h1>
+    <p class="opacity-80 mt-3 text-lg">{t(lang, 'home.team_body')}</p>
+
+    <div class="mt-10 space-y-8">
+      {
+        rendered.map(({ membro, Content }) => (
+          <article class="card lg:card-side bg-base-100 border border-base-300 shadow-sm">
+            <figure class="lg:w-56 shrink-0 bg-base-200">
+              {membro.data.photo ? (
+                <img
+                  src={assetPath(membro.data.photo)}
+                  alt={membro.data.name}
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full h-64 lg:h-full object-cover object-top"
+                />
+              ) : (
+                <div
+                  class="w-full h-40 lg:h-full flex items-center justify-center text-primary/30"
+                  aria-hidden="true"
+                >
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="4" />
+                    <path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1" />
+                  </svg>
+                </div>
+              )}
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl text-primary">
+                {membro.data.pagina ? (
+                  <a href={localizedPath(membro.data.lang, membro.data.pagina)} class="link link-hover">
+                    {membro.data.name}
+                  </a>
+                ) : (
+                  membro.data.name
+                )}
+              </h2>
+              {(membro.data.role || membro.data.affiliation) && (
+                <p class="text-sm uppercase tracking-wide opacity-70">
+                  {[membro.data.role, membro.data.affiliation].filter(Boolean).join(' · ')}
+                </p>
+              )}
+              <div class="prose prose-sm max-w-none mt-2">
+                <Content />
+              </div>
+              <div class="card-actions mt-4 flex-wrap">
+                {membro.data.links?.lattes && (
+                  <a class="btn btn-outline btn-primary btn-sm" href={membro.data.links.lattes} rel="noopener" target="_blank">
+                    Lattes ↗
+                  </a>
+                )}
+                {membro.data.links?.orcid && (
+                  <a class="btn btn-outline btn-primary btn-sm" href={membro.data.links.orcid} rel="noopener" target="_blank">
+                    ORCID ↗
+                  </a>
+                )}
+                {membro.data.links?.site && (
+                  <a class="btn btn-outline btn-primary btn-sm" href={membro.data.links.site} rel="noopener" target="_blank">
+                    {t(lang, 'team.site')} ↗
+                  </a>
+                )}
+                {membro.data.pagina && (
+                  <a class="btn btn-primary btn-sm" href={localizedPath(membro.data.lang, membro.data.pagina)}>
+                    {t(lang, 'team.profile')}
+                  </a>
+                )}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
