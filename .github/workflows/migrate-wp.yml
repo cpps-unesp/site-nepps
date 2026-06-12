@@ -36,5 +36,8 @@ jobs:
             echo "Nenhuma mudança de conteúdo para commitar."
           else
             git commit -m "chore: importa conteúdo do WordPress (nepps.org) via REST"
-            git push
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase
+            done
           fi

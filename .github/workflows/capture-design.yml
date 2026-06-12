@@ -82,5 +82,8 @@ jobs:
             echo "Sem mudanças."
           else
             git commit -m "docs: captura referência visual de nepps.org"
-            git push
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase
+            done
           fi
