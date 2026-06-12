@@ -161,3 +161,55 @@ h1, h2, h3, h4, .font-display {
   scroll-margin-top: 5rem;
   font-family: var(--font-display);
 }
+
+/* Blocos de layout do Gutenberg preservados pelo conversor (ex.: página
+   Equipe usa wp-block-media-text com a foto ao lado do texto, agrupados
+   em wp-block-columns — replica o essencial do CSS de blocos do WP) */
+.prose .wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+.prose .wp-block-column {
+  flex: 1 1 0;
+  min-width: min(100%, 280px);
+}
+.prose .wp-block-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.25rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+.prose .wp-block-media-text__media {
+  margin: 0;
+}
+.prose .wp-block-media-text__media img {
+  width: 100%;
+  height: auto;
+  max-height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 0;
+}
+.prose .wp-block-media-text__content {
+  padding: 0;
+}
+.prose .wp-block-media-text__content p {
+  margin: 0.25rem 0;
+}
+@media (max-width: 640px) {
+  .prose .wp-block-media-text.is-stacked-on-mobile {
+    grid-template-columns: 1fr;
+  }
+}
+.prose hr.wp-block-separator {
+  border: 0;
+  border-top: 1px solid var(--color-base-300);
+  margin: 2rem auto;
+  max-width: 8rem;
+}
+.prose hr.wp-block-separator.is-style-wide {
+  max-width: none;
+}
