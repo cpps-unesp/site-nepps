@@ -1,9 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Breadcrumbs from '~/components/Breadcrumbs.astro';
 import EditOnGitHub from '~/components/EditOnGitHub.astro';
-import { LOCALE_MAP, t, type Lang } from '~/i18n/translations';
+import { LOCALE_MAP, type Lang } from '~/i18n/translations';
 import { assetPath, localizedPath } from '~/utils/paths';
 import { entrySlug } from '~/utils/content';
 
@@ -23,7 +22,6 @@ export async function getStaticPaths() {
 const { entry, availableLangs } = Astro.props;
 const lang = entry.data.lang as Lang;
 const { Content } = await render(entry);
-const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).format(entry.data.date);
 ---
 
 <BaseLayout
@@ -34,22 +32,8 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
   pathInLang={`noticias/${entrySlug(entry)}`}
   availableLangs={availableLangs}
 >
-  <div class="bg-base-200 border-b border-base-300">
-    <div class="container mx-auto px-4 py-10 max-w-3xl">
-      <Breadcrumbs
-        lang={lang}
-        trail={[
-          { label: t(lang, 'news.title'), href: localizedPath(lang, 'noticias') },
-          { label: entry.data.title },
-        ]}
-      />
-      <h1 class="text-3xl md:text-4xl font-bold mt-3 text-accent">{entry.data.title}</h1>
-      <p class="opacity-70 mt-2 text-sm">
-        <time datetime={entry.data.date.toISOString()}>{t(lang, 'news.published_on')} {date}</time>
-        {entry.data.author && <> · {entry.data.author}</>}
-      </p>
-    </div>
-  </div>
+  <!-- single de post como no original: sem faixa de título nem meta visível,
+       título direto no artigo -->
   <article class="container mx-auto px-4 py-12 max-w-3xl">
     <script
       type="application/ld+json"
@@ -70,7 +54,7 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
         ).toString(),
       })}
     />
-
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">{entry.data.title}</h1>
 
     {entry.data.image && (
       <img src={assetPath(entry.data.image)} alt="" class="rounded-lg my-8 w-full" loading="lazy" decoding="async" />

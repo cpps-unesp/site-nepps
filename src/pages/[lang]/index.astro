@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
+import NoticiaListItem from '~/components/NoticiaListItem.astro';
 import { LANGUAGES, t, type Lang } from '~/i18n/translations';
 import { assetPath, localizedPath } from '~/utils/paths';
 import { entrySlug } from '~/utils/content';
@@ -22,7 +23,6 @@ const ultimas = noticias.slice(0, 8);
 
 const heroBg = `${import.meta.env.BASE_URL}imagens/wp/UNESP_Franca_Main_Entrance_Franca_SP_Brazil_1567685134097.jpg`.replace(/\/+/g, '/');
 const newsHref = (slug: string) => localizedPath(lang, `noticias/${slug}`);
-const fmtDate = (d: Date) => new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(d);
 ---
 
 <BaseLayout
@@ -104,35 +104,16 @@ const fmtDate = (d: Date) => new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long
       ) : (
         <div class="mt-12">
           {ultimas.map((n, i) => (
-            <article class={`flex flex-col sm:flex-row gap-6 py-6 border-base-300 ${i === 0 ? '' : 'border-t'}`}>
-              {n.data.image && (
-                <a href={newsHref(entrySlug(n))} class="shrink-0">
-                  <img
-                    src={assetPath(n.data.image)}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full sm:w-[300px] aspect-[2/1] object-cover rounded hover:opacity-80 transition-opacity"
-                    width="300"
-                    height="150"
-                  />
-                </a>
-              )}
-              <div class="min-w-0">
-                <p class="text-[11px] font-bold uppercase tracking-[1.2px] opacity-70">
-                  {n.data.tags[0] ?? ''}
-                  {n.data.tags[0] && ' · '}
-                  <time datetime={n.data.date.toISOString()}>{fmtDate(n.data.date)}</time>
-                </p>
-                <h3 class="font-display text-xl md:text-2xl font-bold leading-snug mt-2">
-                  <a href={newsHref(entrySlug(n))} class="link link-hover">{n.data.title}</a>
-                </h3>
-                {n.data.excerpt && <p class="opacity-80 mt-2 line-clamp-2">{n.data.excerpt}</p>}
-                <a href={newsHref(entrySlug(n))} class="link link-primary text-sm mt-2 inline-block">
-                  {t(lang, 'news.read_more')} →
-                </a>
-              </div>
-            </article>
+            <NoticiaListItem
+              lang={lang}
+              slug={entrySlug(n)}
+              title={n.data.title}
+              date={n.data.date}
+              excerpt={n.data.excerpt}
+              image={n.data.image}
+              tag={n.data.tags[0]}
+              divider={i > 0}
+            />
           ))}
         </div>
       )}

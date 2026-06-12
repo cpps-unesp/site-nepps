@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content';
 import { entrySlug } from '~/utils/content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import Breadcrumbs from '~/components/Breadcrumbs.astro';
-import NoticiaCard from '~/components/NoticiaCard.astro';
-import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+import NoticiaListItem from '~/components/NoticiaListItem.astro';
+import Paginacao from '~/components/Paginacao.astro';
+import { LANGUAGES, POR_PAGINA, t, type Lang } from '~/i18n/translations';
 
 export function getStaticPaths() {
   return LANGUAGES.map((lang) => ({ params: { lang } }));
@@ -14,22 +14,24 @@ const lang = Astro.params.lang as Lang;
 const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+// como o archive do original: 10 posts por página
+const pagina = noticias.slice(0, POR_PAGINA);
+const totalPaginas = Math.ceil(noticias.length / POR_PAGINA);
 ---
 
 <BaseLayout lang={lang} title={t(lang, 'news.title')} pathInLang="noticias">
   <div class="bg-base-200 border-b border-base-300">
     <div class="container mx-auto px-4 py-10">
-      <Breadcrumbs lang={lang} trail={[{ label: t(lang, 'news.title') }]} />
       <h1 class="text-3xl md:text-4xl font-bold text-accent">{t(lang, 'news.title')}</h1>
     </div>
   </div>
-  <section class="container mx-auto px-4 py-12">
-    {noticias.length === 0 ? (
+  <section class="container mx-auto px-4 py-12 max-w-5xl">
+    {pagina.length === 0 ? (
       <p class="opacity-70">{t(lang, 'news.empty')}</p>
     ) : (
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {noticias.map((n) => (
-          <NoticiaCard
+      <div>
+        {pagina.map((n, i) => (
+          <NoticiaListItem
             lang={lang}
             headingLevel="h2"
             slug={entrySlug(n)}
@@ -37,9 +39,12 @@ const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).
             date={n.data.date}
             excerpt={n.data.excerpt}
             image={n.data.image}
+            tag={n.data.tags[0]}
+            divider={i > 0}
           />
         ))}
       </div>
     )}
+    <Paginacao lang={lang} atual={1} total={totalPaginas} />
   </section>
 </BaseLayout>

@@ -1,0 +1,62 @@
+---
+// Páginas 2..N do archive de notícias (a 1ª é /[lang]/noticias/),
+// replicando a paginação de 10 posts do site original.
+import { getCollection } from 'astro:content';
+import { entrySlug } from '~/utils/content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import NoticiaListItem from '~/components/NoticiaListItem.astro';
+import Paginacao from '~/components/Paginacao.astro';
+import { LANGUAGES, POR_PAGINA, t, type Lang } from '~/i18n/translations';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const lang of LANGUAGES) {
+    const total = (await getCollection('noticias', (e) => e.data.lang === lang)).length;
+    const totalPaginas = Math.ceil(total / POR_PAGINA);
+    for (let n = 2; n <= totalPaginas; n++) {
+      paths.push({ params: { lang, page: String(n) } });
+    }
+  }
+  return paths;
+}
+
+const lang = Astro.params.lang as Lang;
+const atual = Number(Astro.params.page);
+
+const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const totalPaginas = Math.ceil(noticias.length / POR_PAGINA);
+const pagina = noticias.slice((atual - 1) * POR_PAGINA, atual * POR_PAGINA);
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${t(lang, 'news.title')} — ${atual}`}
+  pathInLang={`noticias/pagina/${atual}`}
+  noindex
+>
+  <div class="bg-base-200 border-b border-base-300">
+    <div class="container mx-auto px-4 py-10">
+      <h1 class="text-3xl md:text-4xl font-bold text-accent">{t(lang, 'news.title')}</h1>
+    </div>
+  </div>
+  <section class="container mx-auto px-4 py-12 max-w-5xl">
+    <div>
+      {pagina.map((n, i) => (
+        <NoticiaListItem
+          lang={lang}
+          headingLevel="h2"
+          slug={entrySlug(n)}
+          title={n.data.title}
+          date={n.data.date}
+          excerpt={n.data.excerpt}
+          image={n.data.image}
+          tag={n.data.tags[0]}
+          divider={i > 0}
+        />
+      ))}
+    </div>
+    <Paginacao lang={lang} atual={atual} total={totalPaginas} />
+  </section>
+</BaseLayout>
