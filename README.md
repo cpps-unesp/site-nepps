@@ -67,7 +67,17 @@ npm run download-images   # baixa as imagens do manifest scripts/wp-images.json
 ## Migração de conteúdo (nepps.org)
 
 O conteúdo placeholder atual em `src/content/` existe só para o site compilar.
-Para trazer o conteúdo real:
+
+**Caminho rápido (REST, sem export):** `npm run convert-wp-rest` busca páginas,
+posts e imagens publicados direto da REST API (`nepps.org/wp-json`) — sem
+precisar de acesso admin ao WordPress. No GitHub, o workflow
+**Actions → "Migrar conteúdo do WordPress (REST)"** roda essa conversão num
+runner (com internet aberta) e commita o resultado na branch. Páginas cujo
+slug colide com rotas do Astro (`home`, `noticias`, `equipe`, `busca`) ficam
+em `src/content/_wp-raw/` para curadoria manual.
+
+**Caminho completo (WXR):** captura também conteúdo não público (rascunhos,
+autores, metadados). Para usá-lo:
 
 1. No WordPress de nepps.org, **Ferramentas → Exportar** → baixe o XML (WXR) e
    salve na raiz como `nepps.WordPress.xml`.

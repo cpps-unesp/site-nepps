@@ -12,6 +12,7 @@
     "astro": "astro",
     "typecheck": "astro check",
     "convert-wp": "node scripts/wp-to-mdx.mjs",
+    "convert-wp-rest": "node scripts/wp-rest-to-mdx.mjs",
     "download-images": "node scripts/download-wp-images.mjs"
   },
   "dependencies": {
