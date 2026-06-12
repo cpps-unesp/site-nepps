@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* fontes self-hosted (sem request ao Google Fonts) */
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+@import "@fontsource/roboto-slab/400.css";
+@import "@fontsource/roboto-slab/600.css";
+@import "@fontsource/roboto-slab/700.css";
+
+@plugin "@tailwindcss/typography";
+
+/* gradiente do cabeçalho do site original (nepps.org / tema astra-child) */
+.brand-gradient {
+  background-image: linear-gradient(-225deg, #4b0082 45%, #7353ba 100%);
+}
+
+/* prose segue as cores do tema DaisyUI ativo (data-theme), já que o
+   `dark:` do Tailwind não acompanha a troca de tema via data-theme */
+.prose {
+  --tw-prose-body: var(--color-base-content);
+  --tw-prose-headings: var(--color-base-content);
+  --tw-prose-lead: var(--color-base-content);
+  --tw-prose-links: var(--color-primary);
+  --tw-prose-bold: var(--color-base-content);
+  --tw-prose-counters: var(--color-base-content);
+  --tw-prose-bullets: var(--color-primary);
+  --tw-prose-hr: var(--color-base-300);
+  --tw-prose-quotes: var(--color-base-content);
+  --tw-prose-quote-borders: var(--color-primary);
+  --tw-prose-captions: var(--color-base-content);
+  --tw-prose-code: var(--color-base-content);
+  --tw-prose-pre-code: var(--color-base-100);
+  --tw-prose-pre-bg: var(--color-neutral);
+  --tw-prose-th-borders: var(--color-base-300);
+  --tw-prose-td-borders: var(--color-base-300);
+}
+
+/* imagens do conteúdo migrado: limita altura e mantém proporção;
+   imagens com link (badges Lattes/ORCID, logos, ícone de download)
+   viram vinhetas pequenas alinhadas em linha */
+.prose img {
+  width: auto;
+  max-height: 28rem;
+}
+.prose a img {
+  display: inline-block;
+  max-height: 4.5rem;
+  margin: 0.25rem 0.75rem 0.25rem 0;
+}
+
+@plugin "daisyui" {
+  themes: nepps --default, neppsdark --prefersdark;
+  root: ":root";
+}
+
+@plugin "daisyui/theme" {
+  name: "nepps";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f5f4f8;
+  --color-base-300: #e6e4ee;
+  --color-base-content: #2a2730;
+
+  --color-primary: #4b0082;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #54595f;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #00B36C;
+  --color-accent-content: #0b3d12;
+
+  --color-neutral: #1d1a25;
+  --color-neutral-content: #f7f6fb;
+
+  --color-info: #4054b2;
+  --color-success: #23a455;
+  --color-warning: #e07b00;
+  --color-error: #c0392b;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "neppsdark";
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #15121b;
+  --color-base-200: #1d1a25;
+  --color-base-300: #2a2433;
+  --color-base-content: #ece9f5;
+
+  --color-primary: #b18ae0;
+  --color-primary-content: #1a0533;
+
+  --color-secondary: #b9b6bf;
+  --color-secondary-content: #15121b;
+
+  --color-accent: #00B36C;
+  --color-accent-content: #082c0f;
+
+  --color-neutral: #0d0a13;
+  --color-neutral-content: #ece9f5;
+
+  --color-info: #6d82e0;
+  --color-success: #2fbe6a;
+  --color-warning: #e69a3a;
+  --color-error: #d65b4f;
+}
+
+@theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Roboto Slab", ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.section-divider {
+  width: 4rem;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose :where(h1, h2, h3, h4) {
+  scroll-margin-top: 5rem;
+  font-family: var(--font-serif);
+}

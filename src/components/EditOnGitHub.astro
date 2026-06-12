@@ -1,0 +1,18 @@
+---
+import { t, type Lang } from '~/i18n/translations';
+
+interface Props {
+  lang: Lang;
+  collection: 'paginas' | 'noticias' | 'equipe';
+  slug: string;
+}
+const { lang, collection, slug } = Astro.props;
+const REPO = 'cpps-unesp/site-nepps';
+const href = `https://github.com/${REPO}/edit/main/src/content/${collection}/${lang}/${slug}.mdx`;
+---
+
+<p class="mt-12 pt-6 border-t border-base-300 text-sm opacity-70" data-pagefind-ignore>
+  <a href={href} rel="noopener" target="_blank" class="link link-hover">
+    ✎ {t(lang, 'common.edit_github')} ↗
+  </a>
+</p>

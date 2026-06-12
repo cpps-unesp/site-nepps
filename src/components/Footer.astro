@@ -1,0 +1,42 @@
+---
+import { t, type Lang } from '~/i18n/translations';
+import { localizedPath } from '~/utils/paths';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-0 bg-neutral text-neutral-content">
+  <div class="container mx-auto px-4 py-12 grid gap-10 md:grid-cols-3 text-sm">
+    <div>
+      <!-- TODO(nepps): trocar por <img> da logo oficial em public/imagens/ -->
+      <p class="font-display text-3xl font-bold tracking-tight">NEPPS</p>
+      <p class="mt-4 opacity-80 leading-relaxed">{t(lang, 'site.tagline')}</p>
+    </div>
+    <nav aria-label={t(lang, 'a11y.nav_footer')}>
+      <p class="section-title text-sm text-accent">{t(lang, 'footer.nav')}</p>
+      <ul class="mt-3 space-y-2">
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'institucional')}>{t(lang, 'nav.institucional')}</a></li>
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'pesquisas')}>{t(lang, 'nav.pesquisas')}</a></li>
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'publicacoes')}>{t(lang, 'nav.publicacoes')}</a></li>
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'noticias')}>{t(lang, 'nav.noticias')}</a></li>
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'equipe')}>{t(lang, 'nav.equipe')}</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="section-title text-sm text-accent">NEPPS</p>
+      <ul class="mt-3 space-y-2">
+        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'busca')}>{t(lang, 'nav.search')}</a></li>
+        <li><a class="link link-hover opacity-90" href="https://github.com/cpps-unesp/site-nepps" rel="noopener" target="_blank">{t(lang, 'footer.source')} ↗</a></li>
+        <li><a class="link link-hover opacity-90" href={`${import.meta.env.BASE_URL}rss.xml`.replace(/\/+/g, '/')}>RSS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="container mx-auto px-4 py-4 text-xs opacity-70 flex flex-wrap items-center justify-between gap-2">
+      <span>© {year} NEPPS — {t(lang, 'footer.rights')}</span>
+      <span>Hospedado no GitHub Pages</span>
+    </div>
+  </div>
+</footer>
