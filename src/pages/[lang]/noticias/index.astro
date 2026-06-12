@@ -19,7 +19,7 @@ const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).
 <BaseLayout lang={lang} title={t(lang, 'news.title')} pathInLang="noticias">
   <section class="container mx-auto px-4 py-12">
     <Breadcrumbs lang={lang} trail={[{ label: t(lang, 'news.title') }]} />
-    <h1 class="text-3xl md:text-4xl font-bold mb-8">{t(lang, 'news.title')}</h1>
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-accent">{t(lang, 'news.title')}</h1>
     {noticias.length === 0 ? (
       <p class="opacity-70">{t(lang, 'news.empty')}</p>
     ) : (

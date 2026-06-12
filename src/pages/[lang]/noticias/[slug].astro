@@ -61,7 +61,7 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
         { label: entry.data.title },
       ]}
     />
-    <h1 class="text-3xl md:text-4xl font-bold mt-3">{entry.data.title}</h1>
+    <h1 class="text-3xl md:text-4xl font-bold mt-3 text-accent">{entry.data.title}</h1>
     <p class="opacity-70 mt-2 text-sm">
       <time datetime={entry.data.date.toISOString()}>{t(lang, 'news.published_on')} {date}</time>
       {entry.data.author && <> · {entry.data.author}</>}

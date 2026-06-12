@@ -35,6 +35,8 @@ const pt: Dict = {
   'common.know_more': 'Saiba mais',
   'common.edit_github': 'Editar esta página no GitHub',
   'home.welcome': 'Boas-vindas!',
+  'site.name_full': 'Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira”',
+  'home.cta_sobre': 'Quem somos',
   'home.about_title': 'O NEPPs',
   'home.about_body':
     'O NEPPs — Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” é composto por docentes, pesquisadores e estudantes de diferentes áreas do conhecimento, comprometidos com a análise multidisciplinar, multidimensional, qualificada e crítica das Políticas Públicas, tendo como eixos estruturantes o Desenvolvimento, a Democracia e a Justiça.',

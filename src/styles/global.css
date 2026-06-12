@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
-/* fontes self-hosted (sem request ao Google Fonts) */
-@import "@fontsource/roboto/400.css";
-@import "@fontsource/roboto/500.css";
-@import "@fontsource/roboto/700.css";
-@import "@fontsource/roboto-slab/400.css";
-@import "@fontsource/roboto-slab/600.css";
-@import "@fontsource/roboto-slab/700.css";
+/* fontes do site original (OnePress em nepps.org): Raleway para títulos,
+   Open Sans para texto — self-hosted, sem request ao Google Fonts */
+@import "@fontsource/raleway/400.css";
+@import "@fontsource/raleway/600.css";
+@import "@fontsource/raleway/700.css";
+@import "@fontsource/raleway/800.css";
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/600.css";
+@import "@fontsource/open-sans/700.css";
 
 @plugin "@tailwindcss/typography";
-
-/* gradiente do cabeçalho do site original (nepps.org / tema astra-child) */
-.brand-gradient {
-  background-image: linear-gradient(-225deg, #4b0082 45%, #7353ba 100%);
-}
 
 /* prose segue as cores do tema DaisyUI ativo (data-theme), já que o
    `dark:` do Tailwind não acompanha a troca de tema via data-theme */
@@ -54,6 +51,9 @@
   root: ":root";
 }
 
+/* Paleta do site original (nepps.org, tema OnePress + customizer):
+   header/links/botões #2c0963, menu #00afef (hover #ffcc29 sobre branco),
+   títulos de página e faixa do rodapé #e32551, cinzas #f8f9f9/#e9e9e9. */
 @plugin "daisyui/theme" {
   name: "nepps";
   default: true;
@@ -61,63 +61,67 @@
   color-scheme: light;
 
   --color-base-100: #ffffff;
-  --color-base-200: #f5f4f8;
-  --color-base-300: #e6e4ee;
-  --color-base-content: #2a2730;
+  --color-base-200: #f8f9f9;
+  --color-base-300: #e9e9e9;
+  --color-base-content: #333333;
 
-  --color-primary: #4b0082;
+  --color-primary: #2c0963;
   --color-primary-content: #ffffff;
 
-  --color-secondary: #54595f;
+  --color-secondary: #00afef;
   --color-secondary-content: #ffffff;
 
-  --color-accent: #00B36C;
-  --color-accent-content: #0b3d12;
+  --color-accent: #e32551;
+  --color-accent-content: #ffffff;
 
-  --color-neutral: #1d1a25;
-  --color-neutral-content: #f7f6fb;
+  --color-neutral: #2c0963;
+  --color-neutral-content: #ffffff;
 
-  --color-info: #4054b2;
+  --color-info: #03c4eb;
   --color-success: #23a455;
-  --color-warning: #e07b00;
-  --color-error: #c0392b;
+  --color-warning: #ffcc29;
+  --color-warning-content: #33270a;
+  --color-error: #e32551;
 
   --radius-selector: 0.5rem;
   --radius-field: 0.5rem;
   --radius-box: 0.75rem;
 }
 
+/* Variante escura (o site original não tem dark mode; mesma família de
+   matizes da marca, com contraste invertido) */
 @plugin "daisyui/theme" {
   name: "neppsdark";
   prefersdark: true;
   color-scheme: dark;
 
-  --color-base-100: #15121b;
-  --color-base-200: #1d1a25;
-  --color-base-300: #2a2433;
-  --color-base-content: #ece9f5;
+  --color-base-100: #170b2e;
+  --color-base-200: #20103d;
+  --color-base-300: #2c1452;
+  --color-base-content: #ece7f7;
 
-  --color-primary: #b18ae0;
+  --color-primary: #b39ddb;
   --color-primary-content: #1a0533;
 
-  --color-secondary: #b9b6bf;
-  --color-secondary-content: #15121b;
+  --color-secondary: #3fc6ff;
+  --color-secondary-content: #03283a;
 
-  --color-accent: #00B36C;
-  --color-accent-content: #082c0f;
+  --color-accent: #f0588a;
+  --color-accent-content: #3a0617;
 
-  --color-neutral: #0d0a13;
-  --color-neutral-content: #ece9f5;
+  --color-neutral: #100722;
+  --color-neutral-content: #ece7f7;
 
-  --color-info: #6d82e0;
+  --color-info: #4fd4f5;
   --color-success: #2fbe6a;
-  --color-warning: #e69a3a;
-  --color-error: #d65b4f;
+  --color-warning: #ffcc29;
+  --color-warning-content: #33270a;
+  --color-error: #f0588a;
 }
 
 @theme {
-  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Roboto Slab", ui-serif, Georgia, serif;
+  --font-sans: "Open Sans", Helvetica, Arial, ui-sans-serif, sans-serif;
+  --font-display: "Raleway", Helvetica, Arial, ui-sans-serif, sans-serif;
 }
 
 html {
@@ -130,13 +134,13 @@ body {
 }
 
 h1, h2, h3, h4, .font-display {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   letter-spacing: -0.01em;
 }
 
 .section-title {
-  font-family: var(--font-serif);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
@@ -155,5 +159,5 @@ h1, h2, h3, h4, .font-display {
 
 .prose :where(h1, h2, h3, h4) {
   scroll-margin-top: 5rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
