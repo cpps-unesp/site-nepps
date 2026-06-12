@@ -1,0 +1,19 @@
+---
+import { DEFAULT_LANG } from '~/i18n/translations';
+import { localizedPath } from '~/utils/paths';
+
+const target = localizedPath(DEFAULT_LANG, '');
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NEPPS</title>
+    <link rel="canonical" href={target} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <script is:inline define:vars={{ target }}>window.location.replace(target);</script>
+  </head>
+  <body>
+    <p>Redirecionando para <a href={target}>{target}</a>…</p>
+  </body>
+</html>

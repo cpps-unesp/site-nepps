@@ -1,0 +1,39 @@
+---
+import { LOCALE_MAP, t, type Lang } from '~/i18n/translations';
+import { assetPath, localizedPath } from '~/utils/paths';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+  title: string;
+  date: Date;
+  excerpt?: string;
+  image?: string;
+  /** nível do título conforme a hierarquia da página (h2 em listagens com h1) */
+  headingLevel?: 'h2' | 'h3';
+}
+const { lang, slug, title, date, excerpt, image, headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
+const href = localizedPath(lang, `noticias/${slug}`);
+const formatted = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).format(date);
+---
+
+<article class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow border border-base-300">
+  {image && (
+    <figure class="aspect-[16/9] overflow-hidden">
+      <img src={assetPath(image)} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+    </figure>
+  )}
+  <div class="card-body">
+    <p class="text-xs uppercase tracking-wide opacity-70">
+      <time datetime={date.toISOString()}>{formatted}</time>
+    </p>
+    <Heading class="card-title text-lg leading-snug">
+      <a href={href} class="link link-hover">{title}</a>
+    </Heading>
+    {excerpt && <p class="opacity-80 text-sm line-clamp-3">{excerpt}</p>}
+    <div class="card-actions mt-2">
+      <a href={href} class="link link-primary text-sm">{t(lang, 'news.read_more')} →</a>
+    </div>
+  </div>
+</article>

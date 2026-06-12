@@ -1,0 +1,17 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { localizedPath } from '~/utils/paths';
+import { DEFAULT_LANG } from '~/i18n/translations';
+---
+
+<BaseLayout lang={DEFAULT_LANG} title="404" pathInLang="" noindex>
+  <section class="container mx-auto px-4 py-24 max-w-xl text-center">
+    <p class="text-6xl font-bold text-primary">404</p>
+    <h1 class="text-2xl font-bold mt-4">Página não encontrada</h1>
+    <p class="opacity-70 mt-2">A página que você procura pode ter sido movida na nova versão do site.</p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a class="btn btn-primary" href={localizedPath('pt', '')}>Ir para o Início</a>
+      <a class="btn btn-ghost" href={localizedPath('pt', 'busca')}>Buscar</a>
+    </div>
+  </section>
+</BaseLayout>

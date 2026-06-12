@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import { entrySlug } from '~/utils/content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import NoticiaCard from '~/components/NoticiaCard.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout lang={lang} title={t(lang, 'news.title')} pathInLang="noticias">
+  <section class="container mx-auto px-4 py-12">
+    <Breadcrumbs lang={lang} trail={[{ label: t(lang, 'news.title') }]} />
+    <h1 class="text-3xl md:text-4xl font-bold mb-8">{t(lang, 'news.title')}</h1>
+    {noticias.length === 0 ? (
+      <p class="opacity-70">{t(lang, 'news.empty')}</p>
+    ) : (
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {noticias.map((n) => (
+          <NoticiaCard
+            lang={lang}
+            headingLevel="h2"
+            slug={entrySlug(n)}
+            title={n.data.title}
+            date={n.data.date}
+            excerpt={n.data.excerpt}
+            image={n.data.image}
+          />
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

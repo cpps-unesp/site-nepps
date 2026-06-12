@@ -1,0 +1,39 @@
+name: Fixar imagens do WordPress
+
+# Baixa as imagens listadas em scripts/wp-images.json (do WordPress ainda no ar)
+# e as commita em public/imagens/wp/, tornando o site independente do WP.
+# Roda manualmente (Actions → Run workflow) ou ao alterar o manifest em uma
+# branch de trabalho — neste caso commita as imagens na própria branch.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['claude/**']
+    paths:
+      - scripts/wp-images.json
+      - .github/workflows/fetch-wp-images.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Baixar imagens
+        run: node scripts/download-wp-images.mjs
+      - name: Commitar imagens novas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/imagens/wp
+          if git diff --cached --quiet; then
+            echo "Nenhuma imagem nova para commitar."
+          else
+            git commit -m "chore: fixa imagens do WordPress em public/imagens/wp"
+            git push
+          fi

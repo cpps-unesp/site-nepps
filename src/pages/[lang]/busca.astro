@@ -1,0 +1,36 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+---
+
+<BaseLayout lang={lang} title={t(lang, 'nav.search')} pathInLang="busca">
+  <section class="container mx-auto px-4 py-12 max-w-3xl">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6">{t(lang, 'nav.search')}</h1>
+    <div id="search"></div>
+    <link
+      rel="stylesheet"
+      href={`${import.meta.env.BASE_URL}pagefind/pagefind-ui.css`.replace(/\/+/g, '/')}
+    />
+    <script is:inline define:vars={{ base: import.meta.env.BASE_URL, lang }}>
+      window.addEventListener('DOMContentLoaded', () => {
+        const url = (base + '/pagefind/pagefind-ui.js').replace(/\/+/g, '/');
+        const label = 'Buscar no site';
+        const s = document.createElement('script');
+        s.src = url;
+        s.onload = () => {
+          // eslint-disable-next-line no-undef
+          new PagefindUI({ element: '#search', showSubResults: true, translations: { placeholder: 'Buscar…' } });
+          requestAnimationFrame(() => {
+            document.querySelector('.pagefind-ui__search-input')?.setAttribute('aria-label', label);
+          });
+        };
+        document.head.appendChild(s);
+      });
+    </script>
+  </section>
+</BaseLayout>

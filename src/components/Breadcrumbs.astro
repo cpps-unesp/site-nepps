@@ -1,0 +1,35 @@
+---
+import { t, type Lang } from '~/i18n/translations';
+import { localizedPath } from '~/utils/paths';
+
+interface Crumb {
+  label: string;
+  href?: string;
+}
+interface Props {
+  lang: Lang;
+  trail: Crumb[];
+}
+const { lang, trail } = Astro.props;
+const home: Crumb = { label: t(lang, 'nav.home'), href: localizedPath(lang, '') };
+const all = [home, ...trail];
+---
+
+<nav aria-label="Breadcrumb" class="text-sm opacity-70 mb-4" data-pagefind-ignore>
+  <ol class="flex flex-wrap items-center gap-2 list-none p-0 m-0">
+    {
+      all.map((c, i) => (
+        <li class="flex items-center gap-2">
+          {c.href && i < all.length - 1 ? (
+            <a href={c.href} class="link link-hover">
+              {c.label}
+            </a>
+          ) : (
+            <span aria-current={i === all.length - 1 ? 'page' : undefined}>{c.label}</span>
+          )}
+          {i < all.length - 1 && <span aria-hidden="true">›</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

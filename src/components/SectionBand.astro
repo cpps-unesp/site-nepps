@@ -1,0 +1,20 @@
+---
+interface Props {
+  variant?: 'light' | 'primary' | 'dark';
+  fullBleed?: boolean;
+  id?: string;
+}
+const { variant = 'light', fullBleed = false, id } = Astro.props;
+const bg =
+  variant === 'primary'
+    ? 'bg-primary text-primary-content'
+    : variant === 'dark'
+      ? 'bg-neutral text-neutral-content'
+      : 'bg-base-100 text-base-content';
+---
+
+<section id={id} class={`${bg} ${fullBleed ? '' : 'py-16 md:py-20'}`}>
+  <div class={fullBleed ? '' : 'container mx-auto px-4'}>
+    <slot />
+  </div>
+</section>

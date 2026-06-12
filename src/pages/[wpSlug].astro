@@ -1,0 +1,48 @@
+---
+// Stubs de redirecionamento para as URLs antigas do WordPress
+// (`/equipe/` → `/pt/equipe/`, `/como-colaborar-espanol/` → `/es/como-colaborar/`),
+// preservando links externos e resultados de busca indexados.
+import { getCollection } from 'astro:content';
+import { localizedPath } from '~/utils/paths';
+import { entrySlug } from '~/utils/content';
+import { LANGUAGES } from '~/i18n/translations';
+
+export async function getStaticPaths() {
+  const paginas = await getCollection('paginas');
+  const noticias = await getCollection('noticias');
+
+  const routes = new Map([
+    ['home', localizedPath('pt', '')],
+    ['noticias', localizedPath('pt', 'noticias')],
+    ['equipe', localizedPath('pt', 'equipe')],
+  ]);
+  for (const e of paginas) {
+    const old = e.data.wpSlug;
+    if (old) routes.set(old, localizedPath(e.data.lang, entrySlug(e)));
+  }
+  for (const e of noticias) {
+    const old = e.data.wpSlug;
+    if (old) routes.set(old, localizedPath(e.data.lang, `noticias/${entrySlug(e)}`));
+  }
+
+  return [...routes]
+    .filter(([old]) => !(LANGUAGES as readonly string[]).includes(old))
+    .map(([old, target]) => ({ params: { wpSlug: old }, props: { target } }));
+}
+
+const { target } = Astro.props;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>NEPPS</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={target} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <script is:inline define:vars={{ target }}>window.location.replace(target);</script>
+  </head>
+  <body>
+    <p>Redirecionando para <a href={target}>{target}</a>…</p>
+  </body>
+</html>
