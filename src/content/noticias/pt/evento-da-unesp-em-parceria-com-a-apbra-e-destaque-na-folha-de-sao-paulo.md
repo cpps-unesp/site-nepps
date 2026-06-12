@@ -1,0 +1,27 @@
+---
+title: "Evento da Unesp em parceria com a APBRA é destaque na Folha de São Paulo!"
+slug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo
+lang: pt
+wpSlug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo
+date: 2024-07-11T20:00:11.000Z
+excerpt: "Estamos muito orgulhosos em compartilhar que o evento promovido pela Unesp em parceria com a Associação Portugal Brasil 200 anos (APBRA) foi destaque no jornal Folha de São Paulo na …"
+image: "/imagens/wp/WhatsApp-Image-2024-07-11-at-22.49.54.jpeg"
+tags: ["eventos"]
+# original: https://nepps.org/2024/07/11/evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo-%f0%9f%8e%89/
+---
+
+Estamos muito orgulhosos em compartilhar que o evento promovido pela Unesp em parceria com a Associação Portugal Brasil 200 anos (APBRA) foi destaque no jornal Folha de São Paulo na última terça-feira!
+
+O evento contou com a participação do presidente da ABPRA e colunista da Folha, José Manuel Diogo, do jornalista Tom Farias, da professora Angélica Rodrigues (UNESP/FCLAr) e da professora Regina Laisner (UNESP/FCHS), docente da graduação de Relações Internacionais e do programa de Pós-Graduação em Direito da Unesp-Franca e co-coordenadora do NEPPs.
+
+![](/imagens/wp/WhatsApp-Image-2024-07-11-at-22.49.54-1024x844.jpeg)
+
+Da esquerda para a direita, a professora Regina Laisner, o colunista José Manuel Diogo, e o jornalista Tom Farias
+
+Os participantes discutiram a riqueza da língua portuguesa e a cidadania cultural que ela promove, explorando temas que unem Brasil e Portugal através da literatura e da cultura. Os tópicos principais abordaram a cidadania e a língua, assim como cidadania e migrações, promovendo um diálogo rico e diversificado sobre nossa herança linguística comum.
+
+A TV Unesp também realizou a cobertura do evento, realizando entrevistas com os participantes. Para acessar a cobertura completa acesse [TV Unesp](https://youtu.be/pNuqOLhyj8A?si=jvVOn_bAnpR8kO78).
+
+Confira o evento completo [neste link](https://www.youtube.com/live/I6_QvJ4P_fo?si=RfwO1rQfVYYlKDEa)!
+
+Para ler a matéria completa acesse [Folha de São Paulo](https://www1.folha.uol.com.br/colunas/monicabergamo/2024/07/unesp-e-associacao-portugal-brasil-promovem-debate-sobre-a-lingua-portuguesa.shtml?pwgt=l9om4czhi6h6az62gu5s241epgs0tx1ir8zpz7wiftkebchu&utm_source=whatsapp&utm_medium=social&utm_campaign=compwagift).

@@ -10,9 +10,9 @@ export const GET: APIRoute = async (context) => {
   );
 
   return rss({
-    title: 'NEPPS — Notícias',
+    title: 'NEPPs — Notícias',
     description:
-      'Rede de Pesquisadores e Gestores em Internacionalização da Educação Superior da América Latina',
+      'Notícias do NEPPs — Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” (FCHS, UNESP Franca)',
     site: context.site!,
     items: noticias.map((n) => ({
       title: n.data.title,

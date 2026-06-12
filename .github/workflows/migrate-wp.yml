@@ -1,0 +1,44 @@
+name: Migrar conteúdo do WordPress (REST)
+
+# Busca o conteúdo publicado de nepps.org via REST API (wp-json), converte
+# em MDX (scripts/wp-rest-to-mdx.mjs), baixa as imagens e commita tudo na
+# própria branch. Útil porque o sandbox de desenvolvimento não tem acesso
+# de rede ao WordPress — os runners do Actions têm.
+# Roda manualmente (Actions → Run workflow) ou ao alterar este arquivo em
+# uma branch claude/**.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['claude/**']
+    paths:
+      - .github/workflows/migrate-wp.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: npm
+      - run: npm ci
+      - name: Converter conteúdo (REST → MDX)
+        run: node scripts/wp-rest-to-mdx.mjs
+      - name: Baixar imagens do manifest
+        run: node scripts/download-wp-images.mjs
+      - name: Commitar conteúdo migrado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content public/imagens/wp scripts/wp-images.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma mudança de conteúdo para commitar."
+          else
+            git commit -m "chore: importa conteúdo do WordPress (nepps.org) via REST"
+            git push
+          fi

@@ -38,27 +38,7 @@ const noticias = defineCollection({
   }),
 });
 
-const equipe = defineCollection({
-  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/equipe' }),
-  schema: z.object({
-    name: z.string(),
-    lang: langField.default('pt'),
-    role: z.string().optional(),
-    affiliation: z.string().optional(),
-    photo: z.string().optional(),
-    /** slug de uma página interna com o perfil completo (ex.: "fulano-de-tal") */
-    pagina: z.string().optional(),
-    order: z.number().default(99),
-    links: z
-      .object({
-        lattes: z.string().url().optional(),
-        orcid: z.string().url().optional(),
-        site: z.string().url().optional(),
-        email: z.string().email().optional(),
-      })
-      .partial()
-      .optional(),
-  }),
-});
-
-export const collections = { paginas, noticias, equipe };
+// A equipe é hoje uma página migrada do WordPress (src/content/paginas/pt/equipe.mdx).
+// Se quisermos voltar aos cards estruturados (como no site-redalint), recriar aqui a
+// collection `equipe` + a rota src/pages/[lang]/equipe.astro.
+export const collections = { paginas, noticias };
