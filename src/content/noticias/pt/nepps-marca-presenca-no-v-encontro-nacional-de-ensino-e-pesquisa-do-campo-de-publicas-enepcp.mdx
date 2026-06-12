@@ -1,0 +1,19 @@
+---
+title: "NEPPs marca presença no V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas (ENEPCP)"
+slug: nepps-marca-presenca-no-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-enepcp
+lang: pt
+wpSlug: nepps-marca-presenca-no-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-enepcp
+date: 2023-09-12T13:31:51.000Z
+excerpt: "O Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” NEPPs, da UNESP Franca, teve destaque em várias frentes de atuação e participação no V Encontro Nacional de Ensino …"
+image: "/imagens/wp/Marca-ENEPCP-1024x591-1.png"
+tags: ["eventos"]
+# original: https://nepps.org/2023/09/12/nepps-marca-presenca-no-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-enepcp/
+---
+
+O Núcleo de Estudos de Políticas Públicas “Elza de Andrade Oliveira” NEPPs, da UNESP Franca, teve destaque em várias frentes de atuação e participação no V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas, realizado entre os dias 04 e 06 de setembro de 2023 em Belo Horizonte /MG.
+
+Regina Laisner uma das co-coordenadoras do NEPPs coordenou junto com Lindijane Almeida (UFRN), Zilma Borges (FGV) e Fernanda Natasha (UNB), a [**Sessão Temática: ST11 – “Participação Social e Ação Pública: perspectivas para o fortalecimento da democracia e da gestão pública”**](/pt/v-enepcp-st11-e-mesa-redonda/), uma parceria NEPPs e LAP2D – Laboratório de Pesquisas sobre Ação Pública para o Desenvolvimento Democrático da UNB. Regina também propôs e coordenou a [**mesa redonda “Políticas Públicas e Direito: diálogos para a inovação democrática”**](/pt/v-enepcp-st11-e-mesa-redonda/) com a participação de Vanessa Elias de Oliveira (UFABC); Lígia Mori Madeira (UFRGS) e Wagner Romão (UNICAMP).
+
+Camila Gonçalves De Mario, também co-coordenadora do NEPPs e professora da Universidade Cândido Mendes (UCAM), coordenou a [**Sessão Temática 16 – “Avaliação de Políticas Públicas”**](/pt/v-enepcp-st16-e-mesa-redonda/), junto com Alcides Fernando Gussi (UFC) e Breynner Ricardo de Oliveira (UFOP). Nesta sessão, Regina Claudia Laisner apresentou o trabalho **[“Construção da avaliação da participação nos Planos Diretores dos Aglomerados Urbanos de Franca e São José dos Campos”](/pt/v-enepcp-st16-e-mesa-redonda/)** de sua autoria, junto com Júlia Navarro Perioto, Paládia de Oliveira Romeiro da Silva e André Luiz Pereira Spinieli, todos vinculados ao projeto “Direito à cidade e participação nos Planos Diretores dos Aglomerados Urbanos de Franca e São José dos Campos no Estado de São Paulo”, parceria entre o NEPPs e o Núcleo de Pesquisa-ação Cartografias Sociais (NEPACS) da Universidade do Vale do Paraíba (UNIVAP). No âmbito deste projeto, e como resultado do trabalho de seus membros, também houve a apresentação do trabalho [**“Cartografias sociais como inovação para a avaliação nos contextos urbanos”**](/pt/v-enepcp-cartografias-sociais-como-inovacao-para-avaliacao-nos-contextos-urbanos/) feita por Maria Yumi Buzinelli Inabana, uma de suas autoras, em co-autoria com Regina Claudia Laisner, André Luiz pereira Spinieli e Fernanda de Carvalho na III Mostra de Desenvolvimento Tecnológico e Extensão inovadora do Campo de Públicas (III DTEI-CP). . Também relacionado a este projeto Nathan Gomes do Nascimento Pereira e Julia Navarro Perioto, como seus membros, dividiram a coordenação da [**Sessão Temática “Direito social à moradia e regularização fundiária: perspectivas para políticas públicas habitacionais”**](/pt/v-enpecp-sessao-virtual/) com André Simionato Castro (USP) e Taisa Cintra Dosso (PUC – Campinas).
+
+Ainda, Paula Regina de Jesus Pinsetta Pavarina, também na condição de co-cordenadora do NEPPs, participou da **[Mesa Redonda “A análise de conjuntura e as suas contribuições para o campo de públicas”](/pt/mesa-redonda-analise-de-conjuntura-e-as-suas-contribuicoes-para-o-campo-de-publicas/)**, junto com Regina Claudia Laisner, sob a coordenação de Camila Gonçalves De Mario.
