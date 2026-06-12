@@ -1,0 +1,33 @@
+---
+// Paginação numerada como o archive do site original (page-numbers do WP).
+import { localizedPath } from '~/utils/paths';
+import type { Lang } from '~/i18n/translations';
+
+interface Props {
+  lang: Lang;
+  atual: number;
+  total: number;
+}
+const { lang, atual, total } = Astro.props;
+const pageHref = (n: number) =>
+  n <= 1 ? localizedPath(lang, 'noticias') : localizedPath(lang, `noticias/pagina/${n}`);
+const paginas = Array.from({ length: total }, (_, i) => i + 1);
+---
+
+{total > 1 && (
+  <nav class="mt-12 flex flex-wrap items-center justify-center gap-2" aria-label="Paginação">
+    {atual > 1 && (
+      <a href={pageHref(atual - 1)} class="btn btn-sm btn-ghost" rel="prev">«</a>
+    )}
+    {paginas.map((n) =>
+      n === atual ? (
+        <span class="btn btn-sm btn-primary pointer-events-none" aria-current="page">{n}</span>
+      ) : (
+        <a href={pageHref(n)} class="btn btn-sm btn-ghost border border-base-300">{n}</a>
+      ),
+    )}
+    {atual < total && (
+      <a href={pageHref(atual + 1)} class="btn btn-sm btn-ghost" rel="next">»</a>
+    )}
+  </nav>
+)}

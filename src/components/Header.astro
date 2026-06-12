@@ -84,14 +84,15 @@ const navItems: NavItem[] = [
 
 const showLangPicker = LANGUAGES.length > 1;
 const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negativo-e1623613930590.png`.replace(/\/+/g, '/');
+// .onepress-menu a do original: Raleway 13px 600 uppercase
 const linkCls =
-  'px-2 xl:px-3 py-2 text-xs xl:text-sm font-semibold uppercase tracking-wide whitespace-nowrap rounded text-secondary transition-colors hover:bg-white hover:text-warning';
+  'px-2 xl:px-2.5 py-2 font-display text-[13px] font-semibold uppercase tracking-wide whitespace-nowrap rounded text-secondary transition-colors hover:bg-white hover:text-warning';
 ---
 
 <!-- Barra única roxa como no site original (OnePress: .site-header #2c0963,
      menu #00afef com hover amarelo sobre branco) -->
 <header class="sticky top-0 z-30 shadow-sm bg-primary text-primary-content">
-  <div class="container mx-auto px-4 flex items-center justify-between gap-2 py-2.5">
+  <div class="container mx-auto px-4 flex items-center justify-between gap-2 min-h-[75px] py-2">
     <a href={localizedPath(lang, '')} class="block shrink-0" aria-label="NEPPs — Início">
       <img
         src={logo}
@@ -114,7 +115,7 @@ const linkCls =
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
-                <ul class="dropdown-content menu bg-base-100 text-base-content rounded-box shadow-lg border border-base-300 w-72 z-40 p-2">
+                <ul class="dropdown-content menu bg-base-100 text-base-content rounded-box shadow-lg border border-base-300 w-72 z-40 p-2 text-[13px]">
                   {item.children.map((c) => (
                     <li>
                       <a href={c.href} class="text-sm">{c.label}</a>

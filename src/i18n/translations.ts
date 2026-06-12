@@ -6,6 +6,9 @@ export const LANGUAGES = ['pt'] as const;
 export type Lang = (typeof LANGUAGES)[number];
 export const DEFAULT_LANG: Lang = 'pt';
 
+// posts por página no archive de notícias (10, como no site original)
+export const POR_PAGINA = 10;
+
 export const LOCALE_MAP: Record<Lang, string> = {
   pt: 'pt-BR',
 };

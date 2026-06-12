@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '~/layouts/BaseLayout.astro';
-import NoticiaCard from '~/components/NoticiaCard.astro';
+import NoticiaListItem from '~/components/NoticiaListItem.astro';
 import { LANGUAGES, t, type Lang } from '~/i18n/translations';
-import { localizedPath } from '~/utils/paths';
+import { assetPath, localizedPath } from '~/utils/paths';
 import { entrySlug } from '~/utils/content';
 
 export function getStaticPaths() {
@@ -18,9 +18,11 @@ const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).
 // "EM DESTAQUE": notícias marcadas featured (como na home original); fallback: últimas
 const destaque = noticias.filter((n) => n.data.featured).slice(0, 4);
 const emDestaque = destaque.length > 0 ? destaque : noticias.slice(0, 4);
-const ultimas = noticias.slice(0, 3);
+// seção "Notícias" da home original lista 8 posts em linhas
+const ultimas = noticias.slice(0, 8);
 
 const heroBg = `${import.meta.env.BASE_URL}imagens/wp/UNESP_Franca_Main_Entrance_Franca_SP_Brazil_1567685134097.jpg`.replace(/\/+/g, '/');
+const newsHref = (slug: string) => localizedPath(lang, `noticias/${slug}`);
 ---
 
 <BaseLayout
@@ -29,53 +31,68 @@ const heroBg = `${import.meta.env.BASE_URL}imagens/wp/UNESP_Franca_Main_Entrance
   description={t(lang, 'site.tagline')}
   pathInLang=""
 >
-  <!-- HERO: como no original — foto da UNESP Franca com overlay escuro,
-       nome do núcleo centrado e CTAs "Quem somos" / "Notícias" -->
+  <!-- HERO: como no original — slideshow fullscreen com a foto da UNESP Franca,
+       título em duas linhas e botões "Quem somos" (roxo) / "Notícias" (outline) -->
   <section
-    class="relative overflow-hidden bg-primary bg-cover bg-center"
+    class="relative overflow-hidden bg-primary bg-cover bg-center min-h-[calc(100svh-75px)] flex items-center"
     style={`background-image: url('${heroBg}')`}
   >
-    <div class="absolute inset-0 bg-black/45" aria-hidden="true"></div>
-    <div class="relative container mx-auto px-4 py-28 md:py-40 max-w-4xl text-center text-white">
+    <div class="absolute inset-0 bg-black/30" aria-hidden="true"></div>
+    <div class="relative container mx-auto px-4 py-24 max-w-4xl text-center text-white">
       <h1 class="font-display text-3xl md:text-5xl font-bold leading-tight text-balance drop-shadow">
-        {t(lang, 'site.name_full')}
+        Núcleo de Estudos de Políticas Públicas
+        <span class="block mt-2">“Elza de Andrade Oliveira”</span>
       </h1>
       <div class="mt-10 flex flex-wrap justify-center gap-3">
-        <a class="btn bg-white text-primary border-none hover:bg-base-200" href={localizedPath(lang, 'institucional')}>
+        <a class="btn btn-primary btn-lg" href={localizedPath(lang, 'institucional')}>
           {t(lang, 'home.cta_sobre')}
         </a>
-        <a class="btn btn-outline text-white border-white hover:bg-white hover:text-primary" href={localizedPath(lang, 'noticias')}>
+        <a class="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary" href={localizedPath(lang, 'noticias')}>
           {t(lang, 'nav.noticias')}
         </a>
       </div>
     </div>
   </section>
 
-  <!-- EM DESTAQUE: como a section-services da home original -->
-  <section class="py-16 md:py-20 bg-base-100">
-    <div class="container mx-auto px-4">
+  <!-- EM DESTAQUE: como a section-services do original — cards horizontais
+       em coluna única, thumb à esquerda (máx. 120px), título e resumo -->
+  <section class="py-16 md:py-20 bg-base-200">
+    <div class="container mx-auto px-4 max-w-5xl">
       <div class="text-center">
         <h2 class="section-title text-3xl md:text-4xl text-primary">{t(lang, 'home.featured_title')}</h2>
         <div class="section-divider mx-auto mt-4"></div>
       </div>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-12">
+      <div class="mt-12 space-y-6">
         {emDestaque.map((n) => (
-          <NoticiaCard
-            lang={lang}
-            slug={entrySlug(n)}
-            title={n.data.title}
-            date={n.data.date}
-            excerpt={n.data.excerpt}
-            image={n.data.image}
-          />
+          <a
+            href={newsHref(entrySlug(n))}
+            class="flex flex-col sm:flex-row gap-6 bg-base-100 p-6 md:p-8 rounded-box shadow-sm hover:shadow-md transition-shadow"
+          >
+            {n.data.image && (
+              <img
+                src={assetPath(n.data.image)}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                class="w-full sm:w-[120px] sm:h-[120px] object-cover rounded shrink-0"
+                width="120"
+                height="120"
+              />
+            )}
+            <div>
+              <h3 class="font-display text-lg md:text-xl font-bold leading-snug">{n.data.title}</h3>
+              {n.data.excerpt && <p class="opacity-80 mt-2 text-sm md:text-base line-clamp-3">{n.data.excerpt}</p>}
+            </div>
+          </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- NOTÍCIAS: título e subtítulo da home original -->
-  <section class="py-16 md:py-20 bg-base-200">
-    <div class="container mx-auto px-4">
+  <!-- NOTÍCIAS: lista vertical com separadores, thumb à esquerda, categoria,
+       título e resumo — como a section-news do original -->
+  <section class="py-16 md:py-20 bg-base-100">
+    <div class="container mx-auto px-4 max-w-5xl">
       <div class="text-center">
         <h2 class="section-title text-3xl md:text-4xl text-primary">{t(lang, 'news.title')}</h2>
         <div class="section-divider mx-auto mt-4"></div>
@@ -85,15 +102,17 @@ const heroBg = `${import.meta.env.BASE_URL}imagens/wp/UNESP_Franca_Main_Entrance
       {ultimas.length === 0 ? (
         <p class="text-center opacity-70 mt-10">{t(lang, 'news.empty')}</p>
       ) : (
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
-          {ultimas.map((n) => (
-            <NoticiaCard
+        <div class="mt-12">
+          {ultimas.map((n, i) => (
+            <NoticiaListItem
               lang={lang}
               slug={entrySlug(n)}
               title={n.data.title}
               date={n.data.date}
               excerpt={n.data.excerpt}
               image={n.data.image}
+              tag={n.data.tags[0]}
+              divider={i > 0}
             />
           ))}
         </div>

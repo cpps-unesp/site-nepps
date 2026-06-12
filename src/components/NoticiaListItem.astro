@@ -1,0 +1,53 @@
+---
+// Linha de notícia no padrão da section-news/archive do site original:
+// thumb 300x150 à esquerda, categoria + data em caps 11px, título e resumo.
+import { t, type Lang } from '~/i18n/translations';
+import { assetPath, localizedPath } from '~/utils/paths';
+
+interface Props {
+  lang: Lang;
+  slug: string;
+  title: string;
+  date: Date;
+  excerpt?: string;
+  image?: string;
+  tag?: string;
+  /** nível do título conforme a hierarquia da página */
+  headingLevel?: 'h2' | 'h3';
+  divider?: boolean;
+}
+const { lang, slug, title, date, excerpt, image, tag, headingLevel = 'h3', divider = true } = Astro.props;
+const Heading = headingLevel;
+const href = localizedPath(lang, `noticias/${slug}`);
+const formatted = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(date);
+---
+
+<article class={`flex flex-col sm:flex-row gap-6 py-6 border-base-300 ${divider ? 'border-t' : ''}`}>
+  {image && (
+    <a href={href} class="shrink-0">
+      <img
+        src={assetPath(image)}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        class="w-full sm:w-[300px] aspect-[2/1] object-cover rounded hover:opacity-80 transition-opacity"
+        width="300"
+        height="150"
+      />
+    </a>
+  )}
+  <div class="min-w-0">
+    <p class="text-[11px] font-bold uppercase tracking-[1.2px] opacity-70">
+      {tag}
+      {tag && ' · '}
+      <time datetime={date.toISOString()}>{formatted}</time>
+    </p>
+    <Heading class="font-display text-xl md:text-2xl font-bold leading-snug mt-2">
+      <a href={href} class="link link-hover">{title}</a>
+    </Heading>
+    {excerpt && <p class="opacity-80 mt-2 line-clamp-2">{excerpt}</p>}
+    <a href={href} class="link link-primary text-sm mt-2 inline-block">
+      {t(lang, 'news.read_more')} →
+    </a>
+  </div>
+</article>
