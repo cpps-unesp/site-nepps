@@ -34,6 +34,22 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
   pathInLang={`noticias/${entrySlug(entry)}`}
   availableLangs={availableLangs}
 >
+  <div class="bg-base-200 border-b border-base-300">
+    <div class="container mx-auto px-4 py-10 max-w-3xl">
+      <Breadcrumbs
+        lang={lang}
+        trail={[
+          { label: t(lang, 'news.title'), href: localizedPath(lang, 'noticias') },
+          { label: entry.data.title },
+        ]}
+      />
+      <h1 class="text-3xl md:text-4xl font-bold mt-3 text-accent">{entry.data.title}</h1>
+      <p class="opacity-70 mt-2 text-sm">
+        <time datetime={entry.data.date.toISOString()}>{t(lang, 'news.published_on')} {date}</time>
+        {entry.data.author && <> · {entry.data.author}</>}
+      </p>
+    </div>
+  </div>
   <article class="container mx-auto px-4 py-12 max-w-3xl">
     <script
       type="application/ld+json"
@@ -54,18 +70,7 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
         ).toString(),
       })}
     />
-    <Breadcrumbs
-      lang={lang}
-      trail={[
-        { label: t(lang, 'news.title'), href: localizedPath(lang, 'noticias') },
-        { label: entry.data.title },
-      ]}
-    />
-    <h1 class="text-3xl md:text-4xl font-bold mt-3 text-accent">{entry.data.title}</h1>
-    <p class="opacity-70 mt-2 text-sm">
-      <time datetime={entry.data.date.toISOString()}>{t(lang, 'news.published_on')} {date}</time>
-      {entry.data.author && <> · {entry.data.author}</>}
-    </p>
+
 
     {entry.data.image && (
       <img src={assetPath(entry.data.image)} alt="" class="rounded-lg my-8 w-full" loading="lazy" decoding="async" />

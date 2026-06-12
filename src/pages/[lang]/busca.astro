@@ -9,8 +9,12 @@ const lang = Astro.params.lang as Lang;
 ---
 
 <BaseLayout lang={lang} title={t(lang, 'nav.search')} pathInLang="busca">
+  <div class="bg-base-200 border-b border-base-300">
+    <div class="container mx-auto px-4 py-10 max-w-3xl">
+      <h1 class="text-3xl md:text-4xl font-bold text-accent">{t(lang, 'nav.search')}</h1>
+    </div>
+  </div>
   <section class="container mx-auto px-4 py-12 max-w-3xl">
-    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-accent">{t(lang, 'nav.search')}</h1>
     <div id="search"></div>
     <link
       rel="stylesheet"

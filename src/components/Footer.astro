@@ -1,50 +1,59 @@
 ---
 import { t, type Lang } from '~/i18n/translations';
-import { localizedPath } from '~/utils/paths';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const year = new Date().getFullYear();
-const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-secundario-negativo-e1623613930590.png`.replace(/\/+/g, '/');
+
+// Redes sociais do site original (footer-connect)
+const SOCIAL = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/NEPPs-Ncleo-de-Estudos-em-Polticas-Pblicas-da-UNESP-Franca-141044582734794',
+    icon: 'M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/channel/UCUu0UMl1cSpkHFZ8IdP2ohw/featured',
+    icon: 'M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z M9.75 15.02l5.75-3.27-5.75-3.27v6.54z',
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/neppsunesp/',
+    icon: 'M16 3H8a5 5 0 0 0-5 5v8a5 5 0 0 0 5 5h8a5 5 0 0 0 5-5V8a5 5 0 0 0-5-5z M12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z M17.5 6.5h.01',
+  },
+];
 ---
 
-<!-- Como no site original (OnePress): rodapé roxo #2c0963 com a faixa
-     inferior (site-info) rosa #e32551 -->
+<!-- Como no rodapé do site original (OnePress): bloco roxo "Siga-nos nas
+     nossas redes sociais" + faixa inferior (site-info) rosa #e32551 -->
 <footer class="mt-0 bg-neutral text-neutral-content">
-  <div class="container mx-auto px-4 py-12 grid gap-10 md:grid-cols-3 text-sm">
-    <div>
-      <img
-        src={logo}
-        alt="NEPPs — Núcleo de Estudos de Políticas Públicas"
-        width="264"
-        height="90"
-        class="h-[90px] w-auto"
-      />
-      <p class="mt-4 opacity-80 leading-relaxed">{t(lang, 'site.tagline')}</p>
-    </div>
-    <nav aria-label={t(lang, 'a11y.nav_footer')}>
-      <p class="section-title text-sm text-secondary">{t(lang, 'footer.nav')}</p>
-      <ul class="mt-3 space-y-2">
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'institucional')}>{t(lang, 'nav.institucional')}</a></li>
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'pesquisas')}>{t(lang, 'nav.pesquisas')}</a></li>
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'publicacoes')}>{t(lang, 'nav.publicacoes')}</a></li>
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'noticias')}>{t(lang, 'nav.noticias')}</a></li>
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'equipe')}>{t(lang, 'nav.equipe')}</a></li>
-      </ul>
-    </nav>
-    <div>
-      <p class="section-title text-sm text-secondary">NEPPs</p>
-      <ul class="mt-3 space-y-2">
-        <li><a class="link link-hover opacity-90" href={localizedPath(lang, 'busca')}>{t(lang, 'nav.search')}</a></li>
-        <li><a class="link link-hover opacity-90" href="https://github.com/cpps-unesp/site-nepps" rel="noopener" target="_blank">{t(lang, 'footer.source')} ↗</a></li>
-        <li><a class="link link-hover opacity-90" href={`${import.meta.env.BASE_URL}rss.xml`.replace(/\/+/g, '/')}>RSS</a></li>
-      </ul>
-    </div>
+  <div class="container mx-auto px-4 py-14 text-center">
+    <p class="section-title text-lg">{t(lang, 'footer.follow')}</p>
+    <ul class="mt-6 flex items-center justify-center gap-6 list-none p-0">
+      {
+        SOCIAL.map((s) => (
+          <li>
+            <a
+              href={s.href}
+              rel="noopener"
+              target="_blank"
+              aria-label={s.name}
+              class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-white/30 text-white hover:bg-white hover:text-primary transition-colors"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={s.icon} />
+              </svg>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
   <div class="bg-accent text-accent-content">
     <div class="container mx-auto px-4 py-4 text-xs flex flex-wrap items-center justify-between gap-2">
-      <span>© {year} NEPPs — {t(lang, 'footer.rights')}</span>
-      <span>Hospedado no GitHub Pages</span>
+      <span>Copyright © {year} NEPPs — {t(lang, 'footer.rights')}</span>
+      <a href="#main" class="link link-hover" aria-label={t(lang, 'footer.btt')}>↑ {t(lang, 'footer.btt')}</a>
     </div>
   </div>
 </footer>

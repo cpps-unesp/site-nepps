@@ -34,11 +34,16 @@ const slug = entrySlug(entry);
   pathInLang={slug}
   availableLangs={availableLangs}
 >
+  <!-- faixa de título como o .page-header do site original (fundo cinza, título rosa) -->
+  <div class="bg-base-200 border-b border-base-300">
+    <div class="container mx-auto px-4 py-10 max-w-3xl">
+      <Breadcrumbs lang={lang} trail={[{ label: entry.data.title }]} />
+      <h1 class="text-3xl md:text-4xl font-bold text-accent">{entry.data.title}</h1>
+      {entry.data.description && <p class="opacity-80 mt-3 text-lg">{entry.data.description}</p>}
+    </div>
+  </div>
   <article class="container mx-auto px-4 py-12 max-w-3xl">
-    <Breadcrumbs lang={lang} trail={[{ label: entry.data.title }]} />
-    <h1 class="text-3xl md:text-4xl font-bold text-accent">{entry.data.title}</h1>
-    {entry.data.description && <p class="opacity-80 mt-3 text-lg">{entry.data.description}</p>}
-    <div class="prose max-w-none mt-8">
+    <div class="prose max-w-none">
       <Content />
     </div>
     <EditOnGitHub lang={lang} collection="paginas" slug={slug} />
