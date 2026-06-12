@@ -1,0 +1,14 @@
+/* https://nepps.org/wp-content/uploads/useanyfont/uaf.css?ver=1764327328 */
+				@font-face {
+					font-family: 'panton';
+					src: url('/wp-content/uploads/useanyfont/4281panton.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4281panton.woff') format('woff');
+					  font-display: auto;
+				}
+
+				.panton{font-family: 'panton' !important;}
+
+						h1, h2, h3, h4, h5, h6, .entry-title, body.single-post .entry-title, body.page .entry-title, body.category .entry-title, .widget-title, .site-title, .site-description, body, p, blockquote, li, a, strong, b, em, .menu-primario-container li a, .menu-primario-container li span, #menu-primario li a, #menu-primario li span{
+					font-family: 'panton' !important;
+				}
+		
