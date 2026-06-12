@@ -3,6 +3,7 @@ title: "Equipe"
 slug: equipe
 lang: pt
 wpSlug: equipe
+order: 40
 updated: 2026-04-02T20:00:23.000Z
 # original: https://nepps.org/equipe/
 ---

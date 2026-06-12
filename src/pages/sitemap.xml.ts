@@ -11,7 +11,6 @@ export const GET: APIRoute = async ({ site }) => {
   for (const lang of LANGUAGES) {
     urls.add(new URL(localizedPath(lang, ''), site).toString());
     urls.add(new URL(localizedPath(lang, 'noticias'), site).toString());
-    urls.add(new URL(localizedPath(lang, 'equipe'), site).toString());
     urls.add(new URL(localizedPath(lang, 'busca'), site).toString());
   }
 

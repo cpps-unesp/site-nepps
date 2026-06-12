@@ -1,8 +1,8 @@
 ---
 title: "ABRI anuncia concurso de dissertações e teses em Relações Internacionais"
-slug: abri-anuncia-concurso-de-dissertacoes-e-teses-em-relacoes-internacionais%ef%bf%bc
+slug: abri-anuncia-concurso-de-dissertacoes-e-teses-em-relacoes-internacionais
 lang: pt
-wpSlug: abri-anuncia-concurso-de-dissertacoes-e-teses-em-relacoes-internacionais%ef%bf%bc
+wpSlug: abri-anuncia-concurso-de-dissertacoes-e-teses-em-relacoes-internacionais
 date: 2022-05-31T23:54:23.000Z
 excerpt: "ABRI anuncia 10º concurso de disertações e teses em Relações Internacionais Visando incentivar a produção científica e cultural no país e assegurar a difusão dos trabalhos de excelência na área …"
 image: "/imagens/wp/EQlisrdWAAYWOhi.jpg"

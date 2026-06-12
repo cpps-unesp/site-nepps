@@ -136,7 +136,7 @@ async function main() {
 async function writeEntry({ item, isNews, internalRoutes, imageJobs, stats }) {
   const title = plainText(item.title?.rendered ?? item.slug);
   const wpSlug = item.slug;
-  const slug = wpSlug;
+  const slug = cleanSlug(wpSlug);
   const date = new Date((item.date_gmt ?? item.date) + 'Z');
   const updated = new Date((item.modified_gmt ?? item.modified ?? item.date_gmt) + 'Z');
 
@@ -179,7 +179,7 @@ async function writeEntry({ item, isNews, internalRoutes, imageJobs, stats }) {
     ? path.join(ROOT, 'src', 'content', '_wp-raw')
     : path.join(ROOT, 'src', 'content', isNews ? 'noticias' : 'paginas', 'pt');
   await fs.mkdir(outDir, { recursive: true });
-  const outFile = path.join(outDir, `${slug}.mdx`);
+  const outFile = path.join(outDir, `${slug}.md`);
   await fs.writeFile(outFile, fm + '\n\n' + md + '\n');
   stats[reserved ? 'raw' : isNews ? 'noticias' : 'paginas']++;
   console.log(`  ✓ ${path.relative(ROOT, outFile)}`);
@@ -277,6 +277,23 @@ function extractLeadingImage(md) {
   const m = md.match(/^(?:\[)?!\[[^\]]*\]\(([^)\s]+)\)(?:\]\([^)\s]+\))?\s*/);
   if (!m) return { md, image: '' };
   return { md: md.slice(m[0].length).trim(), image: m[1] };
+}
+
+// Slugs do WP vêm percent-encoded (emojis e acentos viram %xx); normaliza
+// para kebab-case ASCII. Mantém wpSlug original para referência.
+function cleanSlug(slug) {
+  let s = slug;
+  try {
+    s = decodeURIComponent(s);
+  } catch {}
+  return (
+    s
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '') || slug.replace(/%[0-9a-f]{2}/gi, '')
+  );
 }
 
 function plainText(html) {

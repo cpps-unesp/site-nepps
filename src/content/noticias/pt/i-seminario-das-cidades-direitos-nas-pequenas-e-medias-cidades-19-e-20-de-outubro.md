@@ -1,8 +1,8 @@
 ---
 title: "Seminário das Cidades: “Direitos nas Pequenas e Médias Cidades” – 19 e 20 de outubro"
-slug: %f0%9f%93%a2%f0%9f%8c%86-i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro
+slug: i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro
 lang: pt
-wpSlug: %f0%9f%93%a2%f0%9f%8c%86-i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro
+wpSlug: i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro
 date: 2023-09-19T16:18:43.000Z
 excerpt: "Nos dias 19 e 20 de outubro, a Faculdade de Ciências Humanas e Sociais (FCHS-UNESP/Franca) sediará o I Seminário das Cidades, abordando o tema “Direitos nas Pequenas e Médias Cidades”. …"
 image: "/imagens/wp/WhatsApp-Image-2023-09-14-at-14.54.48.jpeg"

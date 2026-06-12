@@ -1,8 +1,8 @@
 ---
 title: "Evento da Unesp em parceria com a APBRA é destaque na Folha de São Paulo!"
-slug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo-%f0%9f%8e%89
+slug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo
 lang: pt
-wpSlug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo-%f0%9f%8e%89
+wpSlug: evento-da-unesp-em-parceria-com-a-apbra-e-destaque-na-folha-de-sao-paulo
 date: 2024-07-11T20:00:11.000Z
 excerpt: "Estamos muito orgulhosos em compartilhar que o evento promovido pela Unesp em parceria com a Associação Portugal Brasil 200 anos (APBRA) foi destaque no jornal Folha de São Paulo na …"
 image: "/imagens/wp/WhatsApp-Image-2024-07-11-at-22.49.54.jpeg"

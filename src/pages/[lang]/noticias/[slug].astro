@@ -43,8 +43,8 @@ const date = new Intl.DateTimeFormat(LOCALE_MAP[lang], { dateStyle: 'long' }).fo
         headline: entry.data.title,
         datePublished: entry.data.date.toISOString(),
         inLanguage: LOCALE_MAP[lang],
-        author: { '@type': 'Organization', name: entry.data.author ?? 'NEPPS' },
-        publisher: { '@type': 'Organization', name: 'NEPPS' },
+        author: { '@type': 'Organization', name: entry.data.author ?? 'NEPPs' },
+        publisher: { '@type': 'Organization', name: 'NEPPs' },
         ...(entry.data.image && {
           image: new URL(assetPath(entry.data.image), Astro.site).toString(),
         }),
