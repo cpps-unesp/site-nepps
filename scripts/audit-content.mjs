@@ -67,9 +67,11 @@ function mdToText(md) {
 
 /** recorta o conteúdo principal da página original */
 function extractEntryContent(html) {
-  const start = html.search(/class="[^"]*entry-content[^"]*"/);
-  if (start === -1) return '';
-  const after = html.slice(start);
+  const tag = html.search(/class="[^"]*entry-content[^"]*"/);
+  if (tag === -1) return '';
+  const open = html.indexOf('>', tag);
+  if (open === -1) return '';
+  const after = html.slice(open + 1);
   const endMarkers = ['class="entry-footer', '</article>', 'id="comments"', 'class="site-footer'];
   let end = after.length;
   for (const m of endMarkers) {
@@ -98,7 +100,8 @@ async function auditFile(file) {
   if (!content) return { file, title, orig, skipped: 'entry-content não encontrado' };
 
   const origText = htmlToText(content);
-  const oursSq = squeeze(mdToText(raw));
+  const description = /^description:\s*"?(.*?)"?\s*$/m.exec(raw)?.[1] ?? '';
+  const oursSq = squeeze(mdToText(raw) + ' ' + title + ' ' + description);
 
   // frases do original com mais de 40 caracteres
   const chunks = origText

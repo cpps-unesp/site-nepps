@@ -69,7 +69,11 @@ td.keep((node) => {
 td.addRule('figure', {
   filter: 'figure',
   replacement(content, node) {
-    const img = node.querySelector?.('img');
+    // galerias (vários <img>) mantêm o HTML do bloco; o CSS faz o grid
+    const imgs = node.querySelectorAll?.('img') ?? [];
+    const cls = node.getAttribute?.('class') ?? '';
+    if (imgs.length > 1 || /wp-block-gallery/.test(cls)) return '\n\n' + node.outerHTML + '\n\n';
+    const img = imgs[0];
     const cap = node.querySelector?.('figcaption');
     if (!img) return content;
     const src = img.getAttribute('src') ?? '';
