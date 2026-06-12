@@ -1,0 +1,39 @@
+name: Auditar conteúdo vs WordPress
+
+# Compara o texto de cada página migrada com a página correspondente em
+# nepps.org (scripts/audit-content.mjs) e commita o relatório em
+# docs/content-audit.{md,json}. Roda manualmente ou ao alterar o script
+# em uma branch de trabalho.
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths:
+      - scripts/audit-content.mjs
+      - .github/workflows/audit-content.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Auditar conteúdo
+        run: node scripts/audit-content.mjs
+      - name: Commitar relatório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/content-audit.md docs/content-audit.json
+          if git diff --cached --quiet; then
+            echo "Sem mudanças."
+          else
+            git commit -m "docs: relatório de auditoria de conteúdo vs nepps.org"
+            git push
+          fi

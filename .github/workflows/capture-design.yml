@@ -43,6 +43,8 @@ jobs:
             ['page-institucional', '/institucional/'],
             ['archive-noticias', '/noticias/'],
             ['single-post', '/2026/06/12/unesp-fortalece-a-valorizacao-da-memoria-negra-com-exposicao-franca-afrorota-e-inauguracao-da-praca-da-rebeldia/'],
+            ['page-equipe', '/equipe/'],
+            ['page-pesquisa-concluidas', '/pesquisa-concluidas/'],
           ]) {
             try {
               await fs.writeFile(`docs/design-ref/${name}.html`, await (await get(BASE + path)).text());
