@@ -1,16 +1,5 @@
 [
   {
-    "file": "src/content/paginas/pt/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp.md",
-    "title": "Acontece no dia 09/03 a Aula Inaugural do Programa de Pós-Graduação em Políticas Públicas da UNESP",
-    "orig": "https://nepps.org/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/paginas/pt/a-anepecp-participara-da-programacao-da-75a-reuniao-anual-da-sbpc-entre-os-dias-23-e-29-de-julho-de-2023-com-participacao-da-co-coordenadora-do-nepps-camila-de-mario.md",
     "title": "A ANEPECP participará da programação da 75ª Reunião Anual da SBPC, entre os dias 23 e 29 de julho de 2023, com participação da co-coordenadora do NEPPs, Camila De Mario.",
     "orig": "https://nepps.org/a-anepecp-participara-da-programacao-da-75a-reuniao-anual-da-sbpc-entre-os-dias-23-e-29-de-julho-de-2023-com-participacao-da-co-coordenadora-do-nepps-camila-de-mario/",
@@ -31,39 +20,6 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
-  },
-  {
-    "file": "src/content/paginas/pt/a-interdisciplinariedade-em-pratica-nas-relacoes-internacionais-a-experiencia-da-unesp-franca.md",
-    "title": "A interdisciplinariedade em prática nas relações internacionais – A experiência da UNESP/Franca",
-    "orig": "https://nepps.org/a-interdisciplinariedade-em-pratica-nas-relacoes-internacionais-a-experiencia-da-unesp-franca/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/paginas/pt/anais-do-iv-seminario-nepps-neoliberalismo-como-racionalidade-e-a-atualidade-critica-das-politicas-publicas.md",
-    "title": "IV Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): Neoliberalismo como racionalidade e a atualidade crítica das políticas públicas",
-    "orig": "https://nepps.org/anais-do-iv-seminario-nepps-neoliberalismo-como-racionalidade-e-a-atualidade-critica-das-politicas-publicas/",
-    "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 22,
-    "ourImgs": 22
-  },
-  {
-    "file": "src/content/paginas/pt/anais-do-iii-seminario-nepps-2017.md",
-    "title": "III Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “As múltiplas dimensões das políticas públicas” [2016]",
-    "orig": "https://nepps.org/anais-do-iii-seminario-nepps-2017/",
-    "chunks": 7,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 14,
-    "ourImgs": 14
   },
   {
     "file": "src/content/paginas/pt/analise-de-conjuntura.md",
@@ -110,17 +66,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/associacao-nacional-de-ensino-pesquisa-e-extensao-em-politicas-publicas-anepecp.md",
-    "title": "Associação Nacional de Ensino, Pesquisa e Extensão em Políticas Públicas – ANEPECP",
-    "orig": "https://nepps.org/associacao-nacional-de-ensino-pesquisa-e-extensao-em-politicas-publicas-anepecp/",
-    "chunks": 7,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/paginas/pt/artigos.md",
     "title": "Artigos",
     "orig": "https://nepps.org/artigos/",
@@ -132,10 +77,87 @@
     "ourImgs": 20
   },
   {
+    "file": "src/content/paginas/pt/associacao-nacional-de-ensino-pesquisa-e-extensao-em-politicas-publicas-anepecp.md",
+    "title": "Associação Nacional de Ensino, Pesquisa e Extensão em Políticas Públicas – ANEPECP",
+    "orig": "https://nepps.org/associacao-nacional-de-ensino-pesquisa-e-extensao-em-politicas-publicas-anepecp/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/anais-do-iii-seminario-nepps-2017.md",
+    "title": "III Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “As múltiplas dimensões das políticas públicas” [2016]",
+    "orig": "https://nepps.org/anais-do-iii-seminario-nepps-2017/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 14,
+    "ourImgs": 14
+  },
+  {
+    "file": "src/content/paginas/pt/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp.md",
+    "title": "Acontece no dia 09/03 a Aula Inaugural do Programa de Pós-Graduação em Políticas Públicas da UNESP",
+    "orig": "https://nepps.org/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/a-interdisciplinariedade-em-pratica-nas-relacoes-internacionais-a-experiencia-da-unesp-franca.md",
+    "title": "A interdisciplinariedade em prática nas relações internacionais – A experiência da UNESP/Franca",
+    "orig": "https://nepps.org/a-interdisciplinariedade-em-pratica-nas-relacoes-internacionais-a-experiencia-da-unesp-franca/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/anais-do-iv-seminario-nepps-neoliberalismo-como-racionalidade-e-a-atualidade-critica-das-politicas-publicas.md",
+    "title": "IV Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): Neoliberalismo como racionalidade e a atualidade crítica das políticas públicas",
+    "orig": "https://nepps.org/anais-do-iv-seminario-nepps-neoliberalismo-como-racionalidade-e-a-atualidade-critica-das-politicas-publicas/",
+    "chunks": 8,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 22,
+    "ourImgs": 22
+  },
+  {
     "file": "src/content/paginas/pt/camila-de-mario-co-coordenadora-do-nepps-publica-artigo-sobre-suicidio.md",
     "title": "Camila de Mario, co-coordenadora do NEPPs, publica artigo sobre suicídio",
     "orig": "https://nepps.org/camila-de-mario-co-coordenadora-do-nepps-publica-artigo-sobre-suicidio/",
     "chunks": 6,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/camila-de-mario-co-coordenadora-do-nepps-tem-participacao-com-capitulo-no-livro-dialogos-sur-sur-reflexiones-sobre-el-sur-las-desigualdades-epistemicas-y-la-democratizacion-global-de-los.md",
+    "title": "Camila de Mario, co-coordenadora do NEPPs, tem participação com capítulo no livro “Diálogos Sur-Sur. Reflexiones sobre el sur, las desigualdades epistémicas y la democratización global de los saberes”",
+    "orig": "https://nepps.org/camila-de-mario-co-coordenadora-do-nepps-tem-participacao-com-capitulo-no-livro-dialogos-sur-sur-reflexiones-sobre-el-sur-las-desigualdades-epistemicas-y-la-democratizacion-global-de-los/",
+    "chunks": 3,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-confito-racial-dr-jose-lourenco-alves.md",
+    "title": "Capacitação: Poder e Empoderamento: valorização do comportamento assertivo em situação de confito racial – Dr. José Lourenço Alves",
+    "orig": "https://nepps.org/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-confito-racial-dr-jose-lourenco-alves/",
+    "chunks": 4,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -154,17 +176,6 @@
     "ourImgs": 2
   },
   {
-    "file": "src/content/paginas/pt/camila-de-mario-co-coordenadora-do-nepps-tem-participacao-com-capitulo-no-livro-dialogos-sur-sur-reflexiones-sobre-el-sur-las-desigualdades-epistemicas-y-la-democratizacion-global-de-los.md",
-    "title": "Camila de Mario, co-coordenadora do NEPPs, tem participação com capítulo no livro “Diálogos Sur-Sur. Reflexiones sobre el sur, las desigualdades epistémicas y la democratización global de los saberes”",
-    "orig": "https://nepps.org/camila-de-mario-co-coordenadora-do-nepps-tem-participacao-com-capitulo-no-livro-dialogos-sur-sur-reflexiones-sobre-el-sur-las-desigualdades-epistemicas-y-la-democratizacion-global-de-los/",
-    "chunks": 3,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/paginas/pt/capacitacao-nepo.md",
     "title": "Capacitação NEPO",
     "orig": "https://nepps.org/capacitacao-nepo/",
@@ -175,18 +186,7 @@
       "Lidiane Maciel – UNICAMP Cartaz Programação Mesa de abertura Mesa de abertura Mesa Redonda 3 Confraternização"
     ],
     "origImgs": 6,
-    "ourImgs": 3
-  },
-  {
-    "file": "src/content/paginas/pt/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-confito-racial-dr-jose-lourenco-alves.md",
-    "title": "Capacitação: Poder e Empoderamento: valorização do comportamento assertivo em situação de confito racial – Dr. José Lourenço Alves",
-    "orig": "https://nepps.org/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-confito-racial-dr-jose-lourenco-alves/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
+    "ourImgs": 0
   },
   {
     "file": "src/content/paginas/pt/capitulo-de-livros.md",
@@ -211,54 +211,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/colecao-cadernos-nepps.md",
-    "title": "Coleção Cadernos NEPPs",
-    "orig": "https://nepps.org/colecao-cadernos-nepps/",
-    "chunks": 0,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/paginas/pt/comunicacoes-internas.md",
     "title": "Comunicações Internas",
     "orig": "https://nepps.org/comunicacoes-internas/",
     "chunks": 1,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/paginas/pt/contato.md",
-    "title": "Contato",
-    "orig": "https://nepps.org/contato/",
-    "chunks": 2,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/paginas/pt/diagnostico-e-avaliacao-de-politicas-publicas.md",
-    "title": "Diagnóstico e avaliação de Políticas Públicas",
-    "orig": "https://nepps.org/diagnostico-e-avaliacao-de-politicas-publicas/",
-    "chunks": 0,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/paginas/pt/da-invisibilidade-a-visibilidade-pesquisa-de-condicoes-de-vida-e-pobreza-em-franca-sp2011.md",
-    "title": "Da Invisibilidade à Visibilidade: Pesquisa de condições de vida e pobreza em Franca – SP(2011)",
-    "orig": "https://nepps.org/da-invisibilidade-a-visibilidade-pesquisa-de-condicoes-de-vida-e-pobreza-em-franca-sp2011/",
-    "chunks": 4,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -277,10 +233,43 @@
     "ourImgs": 3
   },
   {
-    "file": "src/content/paginas/pt/dialogos-teoricos-dos-modelos-de-globalizacao-da-democracia-interseccoes-entre-ciencia-politica-e-relacoes-internacionais.md",
-    "title": "Diálogos teóricos dos modelos de “globalização” da democracia: Intersecções entre Ciência Política e Relações Internacionais",
-    "orig": "https://nepps.org/dialogos-teoricos-dos-modelos-de-globalizacao-da-democracia-interseccoes-entre-ciencia-politica-e-relacoes-internacionais/",
-    "chunks": 8,
+    "file": "src/content/paginas/pt/colecao-cadernos-nepps.md",
+    "title": "Coleção Cadernos NEPPs",
+    "orig": "https://nepps.org/colecao-cadernos-nepps/",
+    "chunks": 0,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/contato.md",
+    "title": "Contato",
+    "orig": "https://nepps.org/contato/",
+    "chunks": 2,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/da-invisibilidade-a-visibilidade-pesquisa-de-condicoes-de-vida-e-pobreza-em-franca-sp2011.md",
+    "title": "Da Invisibilidade à Visibilidade: Pesquisa de condições de vida e pobreza em Franca – SP(2011)",
+    "orig": "https://nepps.org/da-invisibilidade-a-visibilidade-pesquisa-de-condicoes-de-vida-e-pobreza-em-franca-sp2011/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/diagnostico-e-avaliacao-de-politicas-publicas.md",
+    "title": "Diagnóstico e avaliação de Políticas Públicas",
+    "orig": "https://nepps.org/diagnostico-e-avaliacao-de-politicas-publicas/",
+    "chunks": 0,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -299,6 +288,17 @@
     "ourImgs": 0
   },
   {
+    "file": "src/content/paginas/pt/dialogos-teoricos-dos-modelos-de-globalizacao-da-democracia-interseccoes-entre-ciencia-politica-e-relacoes-internacionais.md",
+    "title": "Diálogos teóricos dos modelos de “globalização” da democracia: Intersecções entre Ciência Política e Relações Internacionais",
+    "orig": "https://nepps.org/dialogos-teoricos-dos-modelos-de-globalizacao-da-democracia-interseccoes-entre-ciencia-politica-e-relacoes-internacionais/",
+    "chunks": 8,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
     "file": "src/content/paginas/pt/dossies.md",
     "title": "Dossiês",
     "orig": "https://nepps.org/dossies/",
@@ -308,6 +308,17 @@
     "missingSamples": [],
     "origImgs": 2,
     "ourImgs": 2
+  },
+  {
+    "file": "src/content/paginas/pt/eduardo-cervi-ex-membro-do-nepps-recebe-premio-do-consulado-frances.md",
+    "title": "Eduardo Cervi, ex-membro do NEPPs, recebe prêmio do consulado francês",
+    "orig": "https://nepps.org/eduardo-cervi-ex-membro-do-nepps-recebe-premio-do-consulado-frances/",
+    "chunks": 8,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
   },
   {
     "file": "src/content/paginas/pt/encontro-internacional-participacao-democracia-e-politicas-publicas.md",
@@ -334,28 +345,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/eduardo-cervi-ex-membro-do-nepps-recebe-premio-do-consulado-frances.md",
-    "title": "Eduardo Cervi, ex-membro do NEPPs, recebe prêmio do consulado francês",
-    "orig": "https://nepps.org/eduardo-cervi-ex-membro-do-nepps-recebe-premio-do-consulado-frances/",
-    "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/paginas/pt/equipe.md",
-    "title": "Equipe",
-    "orig": "https://nepps.org/equipe/",
-    "chunks": 9,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 62,
-    "ourImgs": 62
-  },
-  {
     "file": "src/content/paginas/pt/folha-de-sao-paulo-setor-tem-33-de-informais-em-bairros-carentes.md",
     "title": "Folha de São Paulo: Setor tem 33% de informais em bairros carentes.",
     "orig": "https://nepps.org/folha-de-sao-paulo-setor-tem-33-de-informais-em-bairros-carentes/",
@@ -364,6 +353,21 @@
     "missingPct": 0,
     "missingSamples": [],
     "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/equipe.md",
+    "title": "Equipe",
+    "orig": "https://nepps.org/equipe/",
+    "chunks": 9,
+    "missing": 9,
+    "missingPct": 100,
+    "missingSamples": [
+      "COORDENAÇÃO Regina Laisner Doutora em Ciência Política pela USP Professora na Unesp Franca Lattes Paula Pavarina Do utora em Economia pela USP Professora na Une",
+      "Promotor de Justiça Lattes Paládia de Oliveira Romeiro da Silva Doutora em Planejamento Urbano e Regional pela UNIVAP.",
+      "Lattes Julia Navarro Perioto Doutora em Direito pela UNESP Lattes Nathan Gomes."
+    ],
+    "origImgs": 62,
     "ourImgs": 0
   },
   {
@@ -411,17 +415,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/grupo-de-pesquisa-sobre-politica-internacional-e-sul-americana-gp-sul.md",
-    "title": "Grupo de Pesquisa sobre Política Internacional e Sul-americana – GP-Sul",
-    "orig": "https://nepps.org/grupo-de-pesquisa-sobre-politica-internacional-e-sul-americana-gp-sul/",
-    "chunks": 1,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/paginas/pt/historia.md",
     "title": "Nossa história",
     "orig": "https://nepps.org/historia/",
@@ -457,6 +450,39 @@
     "ourImgs": 0
   },
   {
+    "file": "src/content/paginas/pt/i-seminario-aplis.md",
+    "title": "I Seminário APLIS",
+    "orig": "https://nepps.org/i-seminario-aplis/",
+    "chunks": 1,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/grupo-de-pesquisa-sobre-politica-internacional-e-sul-americana-gp-sul.md",
+    "title": "Grupo de Pesquisa sobre Política Internacional e Sul-americana – GP-Sul",
+    "orig": "https://nepps.org/grupo-de-pesquisa-sobre-politica-internacional-e-sul-americana-gp-sul/",
+    "chunks": 1,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/i-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-definicoes-e-debates.md",
+    "title": "I Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “Políticas Públicas – definições e debates”",
+    "orig": "https://nepps.org/i-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-definicoes-e-debates/",
+    "chunks": 3,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 13,
+    "ourImgs": 13
+  },
+  {
     "file": "src/content/paginas/pt/ii-ciclo-de-oficinas-sobre-politicas-publicas.md",
     "title": "II Ciclo de Oficinas sobre Políticas Públicas",
     "orig": "https://nepps.org/ii-ciclo-de-oficinas-sobre-politicas-publicas/",
@@ -471,28 +497,6 @@
     "ourImgs": 9
   },
   {
-    "file": "src/content/paginas/pt/i-seminario-aplis.md",
-    "title": "I Seminário APLIS",
-    "orig": "https://nepps.org/i-seminario-aplis/",
-    "chunks": 1,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/paginas/pt/i-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-definicoes-e-debates.md",
-    "title": "I Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “Políticas Públicas – definições e debates”",
-    "orig": "https://nepps.org/i-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-definicoes-e-debates/",
-    "chunks": 3,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 13,
-    "ourImgs": 13
-  },
-  {
     "file": "src/content/paginas/pt/ii-seminario-aplis.md",
     "title": "II Seminário APLIS",
     "orig": "https://nepps.org/ii-seminario-aplis/",
@@ -502,17 +506,6 @@
     "missingSamples": [],
     "origImgs": 12,
     "ourImgs": 12
-  },
-  {
-    "file": "src/content/paginas/pt/ii-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-no-brasil-uma-agenda-de-pesquisa.md",
-    "title": "II Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “Políticas Públicas no Brasil: uma agenda de pesquisa”",
-    "orig": "https://nepps.org/ii-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-no-brasil-uma-agenda-de-pesquisa/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 13,
-    "ourImgs": 13
   },
   {
     "file": "src/content/paginas/pt/inauguracao-da-nova-linha-de-pesquisa-nepps-fiscal-no-nucleo-de-estudos-de-politicas-publicas-elza-de-andrade-oliveira.md",
@@ -537,6 +530,17 @@
     ],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/ii-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-no-brasil-uma-agenda-de-pesquisa.md",
+    "title": "II Seminário do Núcleo de Estudos de Políticas Públicas (NEPPs): “Políticas Públicas no Brasil: uma agenda de pesquisa”",
+    "orig": "https://nepps.org/ii-seminario-do-nucleo-de-estudos-em-politicas-publicas-politicas-publicas-no-brasil-uma-agenda-de-pesquisa/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 13,
+    "ourImgs": 13
   },
   {
     "file": "src/content/paginas/pt/instituto-universitario-de-pesquisas-do-rio-de-janeiro-iuperj.md",
@@ -572,15 +576,15 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/jornais-de-noticias.md",
-    "title": "Jornais de notícias",
-    "orig": "https://nepps.org/jornais-de-noticias/",
-    "chunks": 5,
+    "file": "src/content/paginas/pt/jose-lourenco-alves-pesquisador-do-nepps-escreve-texto-sobre-branquitude-em-comemoracao-ao-dia-da-consciencia-negra.md",
+    "title": "José Lourenço Alves, pesquisador do NEPPs, escreve texto sobre branquitude em comemoração ao Dia da Consciência Negra",
+    "orig": "https://nepps.org/jose-lourenco-alves-pesquisador-do-nepps-escreve-texto-sobre-branquitude-em-comemoracao-ao-dia-da-consciencia-negra/",
+    "chunks": 122,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 4,
-    "ourImgs": 4
+    "origImgs": 1,
+    "ourImgs": 1
   },
   {
     "file": "src/content/paginas/pt/jornal-francanoo-verdade-divulga-materia-sobre-o-forum-franca-sustentavel-com-participacao-da-co-coordenadora-do-nepps-regina-laisner.md",
@@ -594,26 +598,15 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/jose-lourenco-alves-pesquisador-do-nepps-escreve-texto-sobre-branquitude-em-comemoracao-ao-dia-da-consciencia-negra.md",
-    "title": "José Lourenço Alves, pesquisador do NEPPs, escreve texto sobre branquitude em comemoração ao Dia da Consciência Negra",
-    "orig": "https://nepps.org/jose-lourenco-alves-pesquisador-do-nepps-escreve-texto-sobre-branquitude-em-comemoracao-ao-dia-da-consciencia-negra/",
-    "chunks": 122,
+    "file": "src/content/paginas/pt/jornais-de-noticias.md",
+    "title": "Jornais de notícias",
+    "orig": "https://nepps.org/jornais-de-noticias/",
+    "chunks": 5,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/paginas/pt/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional.md",
-    "title": "Lançamento do livro “Secretarias Municipais das Relações Internacionais – um mapeamento nacional”",
-    "orig": "https://nepps.org/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional/",
-    "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
+    "origImgs": 4,
+    "ourImgs": 4
   },
   {
     "file": "src/content/paginas/pt/laboratorio-de-relacoes-internacionais-labri.md",
@@ -627,26 +620,15 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs.md",
-    "title": "Membros do NEPPs compõem GT-14 do XIII EPED-UFS",
-    "orig": "https://nepps.org/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs/",
-    "chunks": 4,
+    "file": "src/content/paginas/pt/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional.md",
+    "title": "Lançamento do livro “Secretarias Municipais das Relações Internacionais – um mapeamento nacional”",
+    "orig": "https://nepps.org/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional/",
+    "chunks": 8,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 3,
-    "ourImgs": 3
-  },
-  {
-    "file": "src/content/paginas/pt/livros.md",
-    "title": "Livros",
-    "orig": "https://nepps.org/livros/",
-    "chunks": 3,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 4,
-    "ourImgs": 4
+    "origImgs": 2,
+    "ourImgs": 2
   },
   {
     "file": "src/content/paginas/pt/lap2d.md",
@@ -669,6 +651,28 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/livros.md",
+    "title": "Livros",
+    "orig": "https://nepps.org/livros/",
+    "chunks": 3,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 4,
+    "ourImgs": 4
+  },
+  {
+    "file": "src/content/paginas/pt/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs.md",
+    "title": "Membros do NEPPs compõem GT-14 do XIII EPED-UFS",
+    "orig": "https://nepps.org/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 3,
+    "ourImgs": 3
   },
   {
     "file": "src/content/paginas/pt/mesa-redonda-analise-de-conjuntura-e-as-suas-contribuicoes-para-o-campo-de-publicas.md",
@@ -704,17 +708,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/nepps-inaugura-serie-de-seminarios-sobre-analise-de-conjuntura.md",
-    "title": "NEPPs inaugura série de seminários sobre Análise de Conjuntura",
-    "orig": "https://nepps.org/nepps-inaugura-serie-de-seminarios-sobre-analise-de-conjuntura/",
-    "chunks": 15,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
-  },
-  {
     "file": "src/content/paginas/pt/nepps-coordenou-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim.md",
     "title": "NEPPs coordenou mesa na XVIII Semana de Relações Internacionais da UNESP: Religião e Política se discutem sim!",
     "orig": "https://nepps.org/nepps-coordenou-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim/",
@@ -735,6 +728,17 @@
     "missingSamples": [],
     "origImgs": 0,
     "ourImgs": 0
+  },
+  {
+    "file": "src/content/paginas/pt/nepps-inaugura-serie-de-seminarios-sobre-analise-de-conjuntura.md",
+    "title": "NEPPs inaugura série de seminários sobre Análise de Conjuntura",
+    "orig": "https://nepps.org/nepps-inaugura-serie-de-seminarios-sobre-analise-de-conjuntura/",
+    "chunks": 15,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 2,
+    "ourImgs": 2
   },
   {
     "file": "src/content/paginas/pt/nepps-marca-presenca-no-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-enepcp.md",
@@ -763,22 +767,15 @@
     "title": "NEPPs marca presença no XIX Congresso Internacional do FOMERCO",
     "orig": "https://nepps.org/nepps-marca-presenca-no-xix-congresso-internacional-do-fomerco/",
     "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
+    "missing": 3,
+    "missingPct": 38,
+    "missingSamples": [
+      "Regina Laisner no Congresso FOMERCO A co-coordenadora do NEPPs, Regina Laisner participou da coordenação dos trabalhos do Eixo 04.",
+      "Coordenação do eixo 4 Além disso, Regina Laisner teve a oportunidade de apresentar a experiência da Red de Investigadores y Gestores en Internacionalización de ",
+      "Apresentação no painel Por fim, na assembleia ocorrida no âmbito do evento, Laisner assumiu, junto à professora Mônica Rocha da Universidade Federal do Tocantin"
+    ],
     "origImgs": 4,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/paginas/pt/nepps-participa-do-iii-seminario-discente-do-iuperj-ucam.md",
-    "title": "NEPPs participa do III Seminário Discente do IUPERJ/UCAM",
-    "orig": "https://nepps.org/nepps-participa-do-iii-seminario-discente-do-iuperj-ucam/",
-    "chunks": 5,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
+    "ourImgs": 0
   },
   {
     "file": "src/content/paginas/pt/nepps-marcou-presenca-no-iv-enepcp-que-ocorreu-em-setembro-de-2021.md",
@@ -792,6 +789,17 @@
     "ourImgs": 4
   },
   {
+    "file": "src/content/paginas/pt/nepps-participa-do-iii-seminario-discente-do-iuperj-ucam.md",
+    "title": "NEPPs participa do III Seminário Discente do IUPERJ/UCAM",
+    "orig": "https://nepps.org/nepps-participa-do-iii-seminario-discente-do-iuperj-ucam/",
+    "chunks": 5,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 2,
+    "ourImgs": 2
+  },
+  {
     "file": "src/content/paginas/pt/nepps-participa-do-iv-coloquio-raca-e-interseccionalidades.md",
     "title": "NEPPS participa do IV Colóquio Raça e Interseccionalidades",
     "orig": "https://nepps.org/nepps-participa-do-iv-coloquio-raca-e-interseccionalidades/",
@@ -803,10 +811,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg.md",
-    "title": "O V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas acontece dos dias 4 a 6 de setembro em Belo Horizonte/MG",
-    "orig": "https://nepps.org/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg/",
-    "chunks": 6,
+    "file": "src/content/paginas/pt/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes.md",
+    "title": "O NEPPs deseja um Feliz Natal e um próspero Ano Novo a todes!",
+    "orig": "https://nepps.org/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes/",
+    "chunks": 1,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -814,10 +822,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes.md",
-    "title": "O NEPPs deseja um Feliz Natal e um próspero Ano Novo a todes!",
-    "orig": "https://nepps.org/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes/",
-    "chunks": 1,
+    "file": "src/content/paginas/pt/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg.md",
+    "title": "O V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas acontece dos dias 4 a 6 de setembro em Belo Horizonte/MG",
+    "orig": "https://nepps.org/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg/",
+    "chunks": 6,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -838,10 +846,10 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/olhares-sobre-o-poder-local-entre-tradicao-e-mudanca-na-regiao-central.md",
-    "title": "Olhares sobre o poder local entre tradição e mudança na região central",
-    "orig": "https://nepps.org/olhares-sobre-o-poder-local-entre-tradicao-e-mudanca-na-regiao-central/",
-    "chunks": 4,
+    "file": "src/content/paginas/pt/observatorio-dos-conselhos.md",
+    "title": "Observatório dos Conselhos",
+    "orig": "https://nepps.org/observatorio-dos-conselhos/",
+    "chunks": 5,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -849,10 +857,10 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/observatorio-dos-conselhos.md",
-    "title": "Observatório dos Conselhos",
-    "orig": "https://nepps.org/observatorio-dos-conselhos/",
-    "chunks": 5,
+    "file": "src/content/paginas/pt/olhares-sobre-o-poder-local-entre-tradicao-e-mudanca-na-regiao-central.md",
+    "title": "Olhares sobre o poder local entre tradição e mudança na região central",
+    "orig": "https://nepps.org/olhares-sobre-o-poder-local-entre-tradicao-e-mudanca-na-regiao-central/",
+    "chunks": 4,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -904,17 +912,6 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/pesquisa-em-andamento.md",
-    "title": "Pesquisa | Em andamento",
-    "orig": "https://nepps.org/pesquisa-em-andamento/",
-    "chunks": 32,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/paginas/pt/pesquisa-concluidas.md",
     "title": "Pesquisa | Concluídas",
     "orig": "https://nepps.org/pesquisa-concluidas/",
@@ -926,11 +923,6 @@
     "ourImgs": 0
   },
   {
-    "file": "/home/runner/work/site-nepps/site-nepps/src/content/paginas/pt/pesquisas.md",
-    "title": "Pesquisas",
-    "skipped": "sem URL original"
-  },
-  {
     "file": "src/content/paginas/pt/pesquisadora-do-nepps-defende-mestrado-sobre-politicas-de-genero-pelo-programa-erasmus.md",
     "title": "Pesquisadora do NEPPs defende Mestrado sobre Políticas de Gênero pelo Programa Erasmus",
     "orig": "https://nepps.org/pesquisadora-do-nepps-defende-mestrado-sobre-politicas-de-genero-pelo-programa-erasmus/",
@@ -940,6 +932,22 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "/home/runner/work/site-nepps/site-nepps/src/content/paginas/pt/pesquisas.md",
+    "title": "Pesquisas",
+    "skipped": "sem URL original"
+  },
+  {
+    "file": "src/content/paginas/pt/pesquisa-em-andamento.md",
+    "title": "Pesquisa | Em andamento",
+    "orig": "https://nepps.org/pesquisa-em-andamento/",
+    "chunks": 32,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
   },
   {
     "file": "src/content/paginas/pt/pesquisadora-do-nepps-e-egressa-da-fchs-dra-julia-lenzi-silva-e-aprovada-como-docente-na-usp.md",
@@ -975,15 +983,15 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/politicas-publicas-e-participacao-social-confira-o-livro-publicado-com-a-contribuicao-do-nepps.md",
-    "title": "“Políticas Públicas e Participação Social”, confira o livro publicado com a contribuição do NEPPs",
-    "orig": "https://nepps.org/politicas-publicas-e-participacao-social-confira-o-livro-publicado-com-a-contribuicao-do-nepps/",
-    "chunks": 4,
+    "file": "src/content/paginas/pt/pesquisadores-do-nepps-unesp-participam-da-construcao-do-1o-protocolo-de-genero-para-governos-locais-da-america-latina.md",
+    "title": "Pesquisadores do NEPPs/UNESP participam da construção do 1º Protocolo de Gênero para Governos Locais da América Latina",
+    "orig": "https://nepps.org/pesquisadores-do-nepps-unesp-participam-da-construcao-do-1o-protocolo-de-genero-para-governos-locais-da-america-latina/",
+    "chunks": 9,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
+    "origImgs": 2,
+    "ourImgs": 2
   },
   {
     "file": "src/content/paginas/pt/politicas-publicas-do-local-ao-global.md",
@@ -997,17 +1005,6 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/pesquisadores-do-nepps-unesp-participam-da-construcao-do-1o-protocolo-de-genero-para-governos-locais-da-america-latina.md",
-    "title": "Pesquisadores do NEPPs/UNESP participam da construção do 1º Protocolo de Gênero para Governos Locais da América Latina",
-    "orig": "https://nepps.org/pesquisadores-do-nepps-unesp-participam-da-construcao-do-1o-protocolo-de-genero-para-governos-locais-da-america-latina/",
-    "chunks": 9,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
-  },
-  {
     "file": "src/content/paginas/pt/politicas-publicas-e-desenvolvimento-local-dimensoes-teoricas-e-algumas-investigacoes.md",
     "title": "Políticas Públicas e desenvolvimento local: dimensões teóricas e algumas investigações",
     "orig": "https://nepps.org/politicas-publicas-e-desenvolvimento-local-dimensoes-teoricas-e-algumas-investigacoes/",
@@ -1017,6 +1014,17 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/politicas-publicas-e-participacao-social-confira-o-livro-publicado-com-a-contribuicao-do-nepps.md",
+    "title": "“Políticas Públicas e Participação Social”, confira o livro publicado com a contribuição do NEPPs",
+    "orig": "https://nepps.org/politicas-publicas-e-participacao-social-confira-o-livro-publicado-com-a-contribuicao-do-nepps/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
   },
   {
     "file": "/home/runner/work/site-nepps/site-nepps/src/content/paginas/pt/publicacoes.md",
@@ -1123,17 +1131,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/resumos-publicados-em-anais.md",
-    "title": "Resumos publicados em anais",
-    "orig": "https://nepps.org/resumos-publicados-em-anais/",
-    "chunks": 2,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
-  },
-  {
     "file": "src/content/paginas/pt/revista-tip-lanca-edicao-comemorativa-de-10-anos-com-mencao-a-co-coordenadora-do-nepps-regina-laisner.md",
     "title": "Revista TIP lança edição comemorativa de 10 anos com menção à co-coordenadora do NEPPs, Regina Laisner",
     "orig": "https://nepps.org/revista-tip-lanca-edicao-comemorativa-de-10-anos-com-mencao-a-co-coordenadora-do-nepps-regina-laisner/",
@@ -1143,6 +1140,17 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "src/content/paginas/pt/resumos-publicados-em-anais.md",
+    "title": "Resumos publicados em anais",
+    "orig": "https://nepps.org/resumos-publicados-em-anais/",
+    "chunks": 2,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 2,
+    "ourImgs": 2
   },
   {
     "file": "src/content/paginas/pt/the-role-of-international-city-networks-in-the-support-of-local-participatory-governance-in-latin-america.md",
@@ -1167,10 +1175,10 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/universidade-do-vale-do-paraiba-univap.md",
-    "title": "Universidade do Vale do Paraíba – UNIVAP",
-    "orig": "https://nepps.org/universidade-do-vale-do-paraiba-univap/",
-    "chunks": 6,
+    "file": "src/content/paginas/pt/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural.md",
+    "title": "Unesp sedia Colóquio de Raça e Interseccionalidades com organização do NEPPs e intensa programação cultural",
+    "orig": "https://nepps.org/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural/",
+    "chunks": 12,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1178,10 +1186,10 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/paginas/pt/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural.md",
-    "title": "Unesp sedia Colóquio de Raça e Interseccionalidades com organização do NEPPs e intensa programação cultural",
-    "orig": "https://nepps.org/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural/",
-    "chunks": 12,
+    "file": "src/content/paginas/pt/universidade-do-vale-do-paraiba-univap.md",
+    "title": "Universidade do Vale do Paraíba – UNIVAP",
+    "orig": "https://nepps.org/universidade-do-vale-do-paraiba-univap/",
+    "chunks": 6,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1200,10 +1208,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/v-enepcp-construcao-da-avaliacao-da-participacao-nos-planos-diretores-dos-aglomerados-de-franca-e-sao-jose-dos-campos.md",
-    "title": "V ENEPCP: Construção da avaliação da participação nos Planos Diretores dos Aglomerados de Franca e São José dos Campos",
-    "orig": "https://nepps.org/v-enepcp-construcao-da-avaliacao-da-participacao-nos-planos-diretores-dos-aglomerados-de-franca-e-sao-jose-dos-campos/",
-    "chunks": 2,
+    "file": "src/content/paginas/pt/v-enepcp-cartografias-sociais-como-inovacao-para-avaliacao-nos-contextos-urbanos.md",
+    "title": "V ENEPCP: Cartografias Sociais como Inovação para avaliação nos contextos urbanos",
+    "orig": "https://nepps.org/v-enepcp-cartografias-sociais-como-inovacao-para-avaliacao-nos-contextos-urbanos/",
+    "chunks": 1,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1211,10 +1219,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/paginas/pt/v-enepcp-cartografias-sociais-como-inovacao-para-avaliacao-nos-contextos-urbanos.md",
-    "title": "V ENEPCP: Cartografias Sociais como Inovação para avaliação nos contextos urbanos",
-    "orig": "https://nepps.org/v-enepcp-cartografias-sociais-como-inovacao-para-avaliacao-nos-contextos-urbanos/",
-    "chunks": 1,
+    "file": "src/content/paginas/pt/v-enepcp-construcao-da-avaliacao-da-participacao-nos-planos-diretores-dos-aglomerados-de-franca-e-sao-jose-dos-campos.md",
+    "title": "V ENEPCP: Construção da avaliação da participação nos Planos Diretores dos Aglomerados de Franca e São José dos Campos",
+    "orig": "https://nepps.org/v-enepcp-construcao-da-avaliacao-da-participacao-nos-planos-diretores-dos-aglomerados-de-franca-e-sao-jose-dos-campos/",
+    "chunks": 2,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1270,11 +1278,13 @@
     "title": "Workshops 2017",
     "orig": "https://nepps.org/workshops-2017/",
     "chunks": 2,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
+    "missing": 1,
+    "missingPct": 50,
+    "missingSamples": [
+      "Oficina com Ana Cristina Gomes – “A corrupção como violadora de Direitos Humanos: a apropriação indevida de políticas públicas” Oficina com Otávio Diniz – “Indi"
+    ],
     "origImgs": 6,
-    "ourImgs": 3
+    "ourImgs": 0
   },
   {
     "file": "src/content/noticias/pt/10-06-as-14h-ocorre-evento-sobre-descolonialidade-e-producao-do-conhecimento-sobre-internacionalziacao-da-educacao-superior.md",
@@ -1332,10 +1342,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/anepecp-e-membros-do-nepps-participam-da-76a-reuniao-da-sbpc.md",
-    "title": "ANEPECP e membros do NEPPs participam da 76ª reunião da SBPC",
-    "orig": "https://nepps.org/2024/07/04/anepecp-e-membros-do-nepps-participam-da-76a-reuniao-da-sbpc/",
-    "chunks": 7,
+    "file": "src/content/noticias/pt/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp.md",
+    "title": "Acontece no dia 09/03 a Aula Inaugural do Programa de Pós-Graduação em Políticas Públicas da UNESP",
+    "orig": "https://nepps.org/2023/03/09/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp/",
+    "chunks": 4,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1343,10 +1353,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp.md",
-    "title": "Acontece no dia 09/03 a Aula Inaugural do Programa de Pós-Graduação em Políticas Públicas da UNESP",
-    "orig": "https://nepps.org/2023/03/09/acontece-no-dia-09-03-a-aula-inaugural-do-programa-de-pos-graduacao-em-politicas-publicas-da-unesp/",
-    "chunks": 4,
+    "file": "src/content/noticias/pt/anepecp-e-membros-do-nepps-participam-da-76a-reuniao-da-sbpc.md",
+    "title": "ANEPECP e membros do NEPPs participam da 76ª reunião da SBPC",
+    "orig": "https://nepps.org/2024/07/04/anepecp-e-membros-do-nepps-participam-da-76a-reuniao-da-sbpc/",
+    "chunks": 7,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1398,20 +1408,9 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/ciclo-de-oficinas-regionais-oficina-aspectos-juridicos-dos-planos-diretores.md",
-    "title": "Ciclo de Oficinas Regionais: Oficina Aspectos Jurídicos dos Planos Diretores",
-    "orig": "https://nepps.org/2022/04/21/ciclo-de-oficinas-regionais-oficina-aspectos-juridicos-dos-planos-diretores/",
-    "chunks": 7,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 3,
-    "ourImgs": 2
-  },
-  {
-    "file": "src/content/noticias/pt/ciclo-de-oficinas-regionais-direito-a-cidade-e-planos-diretores-nas-aglomeracoes-urbanas-de-franca-e-sao-jose-dos-campos.md",
-    "title": "Ciclo de Oficinas Regionais: Direito à cidade e Planos Diretores nas Aglomerações Urbanas de Franca e São José dos Campos",
-    "orig": "https://nepps.org/2021/12/13/ciclo-de-oficinas-regionais-direito-a-cidade-e-planos-diretores-nas-aglomeracoes-urbanas-de-franca-e-sao-jose-dos-campos/",
+    "file": "src/content/noticias/pt/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-conflito-racial.md",
+    "title": "“Capacitação: Poder e Empoderamento: valorização do comportamento assertivo em situação de conflito racial”",
+    "orig": "https://nepps.org/2021/12/13/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-conflito-racial/",
     "chunks": 2,
     "missing": 0,
     "missingPct": 0,
@@ -1420,20 +1419,9 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/co-coordenadora-do-nepps-concede-entrevista-ao-idef.md",
-    "title": "Co-coordenadora do NEPPs concede entrevista ao IdeF",
-    "orig": "https://nepps.org/2022/02/11/co-coordenadora-do-nepps-concede-entrevista-ao-idef/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/noticias/pt/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-conflito-racial.md",
-    "title": "“Capacitação: Poder e Empoderamento: valorização do comportamento assertivo em situação de conflito racial”",
-    "orig": "https://nepps.org/2021/12/13/capacitacao-poder-e-empoderamento-valorizacao-do-comportamento-assertivo-em-situacao-de-conflito-racial/",
+    "file": "src/content/noticias/pt/ciclo-de-oficinas-regionais-direito-a-cidade-e-planos-diretores-nas-aglomeracoes-urbanas-de-franca-e-sao-jose-dos-campos.md",
+    "title": "Ciclo de Oficinas Regionais: Direito à cidade e Planos Diretores nas Aglomerações Urbanas de Franca e São José dos Campos",
+    "orig": "https://nepps.org/2021/12/13/ciclo-de-oficinas-regionais-direito-a-cidade-e-planos-diretores-nas-aglomeracoes-urbanas-de-franca-e-sao-jose-dos-campos/",
     "chunks": 2,
     "missing": 0,
     "missingPct": 0,
@@ -1453,6 +1441,28 @@
     "ourImgs": 3
   },
   {
+    "file": "src/content/noticias/pt/co-coordenadora-do-nepps-concede-entrevista-ao-idef.md",
+    "title": "Co-coordenadora do NEPPs concede entrevista ao IdeF",
+    "orig": "https://nepps.org/2022/02/11/co-coordenadora-do-nepps-concede-entrevista-ao-idef/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/noticias/pt/ciclo-de-oficinas-regionais-oficina-aspectos-juridicos-dos-planos-diretores.md",
+    "title": "Ciclo de Oficinas Regionais: Oficina Aspectos Jurídicos dos Planos Diretores",
+    "orig": "https://nepps.org/2022/04/21/ciclo-de-oficinas-regionais-oficina-aspectos-juridicos-dos-planos-diretores/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 3,
+    "ourImgs": 2
+  },
+  {
     "file": "src/content/noticias/pt/co-coordenadoras-do-nepps-participam-ativamente-do-xix-congresso-internacional-do-fomerco.md",
     "title": "NEPPs marca presença no XIX Congresso Internacional do FOMERCO",
     "orig": "https://nepps.org/2023/11/29/co-coordenadoras-do-nepps-participam-ativamente-do-xix-congresso-internacional-do-fomerco/",
@@ -1462,28 +1472,6 @@
     "missingSamples": [],
     "origImgs": 4,
     "ourImgs": 4
-  },
-  {
-    "file": "src/content/noticias/pt/coordenadoras-do-nepps-e-do-eixo-4-do-fomerco-integracao-politica-divergencias-e-convergencias-organizam-carta-fomerco.md",
-    "title": "Coordenadoras do Nepps e do Eixo 4 do FoMerco – “Integração politica: divergências e convergências” organizam Carta FoMerco.",
-    "orig": "https://nepps.org/2021/09/14/coordenadoras-do-nepps-e-do-eixo-4-do-fomerco-integracao-politica-divergencias-e-convergencias-organizam-carta-fomerco/",
-    "chunks": 0,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
-    "file": "src/content/noticias/pt/coordenadoras-do-nepps-coordenam-eixo-no-xviii-congresso-internacional-do-forum-universitario-mercosul-fomerco.md",
-    "title": "Coordenadoras do Nepps coordenaram Eixo no XVIII Congresso Internacional do Fórum Universitário Mercosul (FoMerco).",
-    "orig": "https://nepps.org/2021/09/22/coordenadoras-do-nepps-coordenam-eixo-no-xviii-congresso-internacional-do-forum-universitario-mercosul-fomerco/",
-    "chunks": 11,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
   },
   {
     "file": "src/content/noticias/pt/co-coordenadoras-do-nepps-participam-de-diplomatura-em-gestao-da-internacionalizacao-universitaria-latino-americana.md",
@@ -1497,6 +1485,28 @@
     "ourImgs": 2
   },
   {
+    "file": "src/content/noticias/pt/coordenadoras-do-nepps-coordenam-eixo-no-xviii-congresso-internacional-do-forum-universitario-mercosul-fomerco.md",
+    "title": "Coordenadoras do Nepps coordenaram Eixo no XVIII Congresso Internacional do Fórum Universitário Mercosul (FoMerco).",
+    "orig": "https://nepps.org/2021/09/22/coordenadoras-do-nepps-coordenam-eixo-no-xviii-congresso-internacional-do-forum-universitario-mercosul-fomerco/",
+    "chunks": 11,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
+    "file": "src/content/noticias/pt/coordenadoras-do-nepps-e-do-eixo-4-do-fomerco-integracao-politica-divergencias-e-convergencias-organizam-carta-fomerco.md",
+    "title": "Coordenadoras do Nepps e do Eixo 4 do FoMerco – “Integração politica: divergências e convergências” organizam Carta FoMerco.",
+    "orig": "https://nepps.org/2021/09/14/coordenadoras-do-nepps-e-do-eixo-4-do-fomerco-integracao-politica-divergencias-e-convergencias-organizam-carta-fomerco/",
+    "chunks": 0,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
     "file": "src/content/noticias/pt/coordenadoras-do-nepps-lideram-discussoes-no-vi-enepcp.md",
     "title": "Coordenadoras do NEPPs lideram discussões no VI ENEPCP",
     "orig": "https://nepps.org/2025/10/09/coordenadoras-do-nepps-lideram-discussoes-no-vi-enepcp/",
@@ -1508,17 +1518,6 @@
     "ourImgs": 4
   },
   {
-    "file": "src/content/noticias/pt/destruccion-y-retroceso-las-politicas-del-gobierno-de-bolsonaro-por-camila-de-mario.md",
-    "title": "“Destrucción y retroceso: las políticas del gobierno de Bolsonaro”, por Camila De Mario",
-    "orig": "https://nepps.org/2022/02/16/destruccion-y-retroceso-las-politicas-del-gobierno-de-bolsonaro-por-camila-de-mario/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/noticias/pt/curso-de-extensao-enfrentamento-da-pobreza-e-da-fome-agenda-2030-franca.md",
     "title": "Curso de extensão – Enfrentamento da pobreza e da fome: Agenda 2030/Franca",
     "orig": "https://nepps.org/2022/08/17/curso-de-extensao-enfrentamento-da-pobreza-e-da-fome-agenda-2030-franca/",
@@ -1528,6 +1527,17 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
+  },
+  {
+    "file": "src/content/noticias/pt/destruccion-y-retroceso-las-politicas-del-gobierno-de-bolsonaro-por-camila-de-mario.md",
+    "title": "“Destrucción y retroceso: las políticas del gobierno de Bolsonaro”, por Camila De Mario",
+    "orig": "https://nepps.org/2022/02/16/destruccion-y-retroceso-las-politicas-del-gobierno-de-bolsonaro-por-camila-de-mario/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
   },
   {
     "file": "src/content/noticias/pt/dia-internacional-das-mulheres-mensagem-nepps.md",
@@ -1607,17 +1617,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/evento-sobre-tecnologias-digitais-ocorrera-no-dia-27-de-novembro.md",
-    "title": "Evento sobre tecnologias digitais ocorrerá no dia 27 de novembro",
-    "orig": "https://nepps.org/2025/11/19/evento-sobre-tecnologias-digitais-ocorrera-no-dia-27-de-novembro/",
-    "chunks": 5,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 2,
-    "ourImgs": 2
-  },
-  {
     "file": "src/content/noticias/pt/i-encontro-do-gt-unesp-2030-a-importancia-das-universidades-para-as-acoes-da-agenda-2030.md",
     "title": "I Encontro do GT UNESP 2030, A importância das universidades para as ações da Agenda 2030",
     "orig": "https://nepps.org/2022/05/04/i-encontro-do-gt-unesp-2030-a-importancia-das-universidades-para-as-acoes-da-agenda-2030/",
@@ -1629,21 +1628,21 @@
     "ourImgs": 1
   },
   {
+    "file": "src/content/noticias/pt/evento-sobre-tecnologias-digitais-ocorrera-no-dia-27-de-novembro.md",
+    "title": "Evento sobre tecnologias digitais ocorrerá no dia 27 de novembro",
+    "orig": "https://nepps.org/2025/11/19/evento-sobre-tecnologias-digitais-ocorrera-no-dia-27-de-novembro/",
+    "chunks": 5,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 2,
+    "ourImgs": 2
+  },
+  {
     "file": "src/content/noticias/pt/i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro-na-unesp-de-franca.md",
     "title": "I Seminário das Cidades – “Direitos nas pequenas e médias cidades” 19 e 20 de Outubro na UNESP de Franca",
     "orig": "https://nepps.org/2023/10/17/i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro-na-unesp-de-franca/",
     "chunks": 18,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/noticias/pt/i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro.md",
-    "title": "Seminário das Cidades: “Direitos nas Pequenas e Médias Cidades” – 19 e 20 de outubro",
-    "orig": "https://nepps.org/2023/09/19/%f0%9f%93%a2%f0%9f%8c%86-i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro/",
-    "chunks": 7,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1660,6 +1659,17 @@
     "missingSamples": [],
     "origImgs": 0,
     "ourImgs": 0
+  },
+  {
+    "file": "src/content/noticias/pt/i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro.md",
+    "title": "Seminário das Cidades: “Direitos nas Pequenas e Médias Cidades” – 19 e 20 de outubro",
+    "orig": "https://nepps.org/2023/09/19/%f0%9f%93%a2%f0%9f%8c%86-i-seminario-das-cidades-direitos-nas-pequenas-e-medias-cidades-19-e-20-de-outubro/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
   },
   {
     "file": "src/content/noticias/pt/ii-ciclo-de-oficinas-sobre-politicas-publicas.md",
@@ -1752,17 +1762,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/lancamento-do-livro-diretrizes-nacionais-de-acoes-de-cidadania-das-ejes.md",
-    "title": "Lançamento do livro “Diretrizes Nacionais de Ações de Cidadania das EJEs”",
-    "orig": "https://nepps.org/2024/08/02/lancamento-do-livro-diretrizes-nacionais-de-acoes-de-cidadania-das-ejes/",
-    "chunks": 6,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/noticias/pt/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional.md",
     "title": "Lançamento do livro “Secretarias Municipais das Relações Internacionais – um mapeamento nacional”",
     "orig": "https://nepps.org/2024/04/06/lancamento-do-livro-secretarias-municipais-das-relacoes-internacionais-um-mapeamento-nacional/",
@@ -1785,15 +1784,15 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs.md",
-    "title": "Membros do NEPPs compõem GT-14 do XIII EPED-UFS",
-    "orig": "https://nepps.org/2024/04/05/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs/",
-    "chunks": 4,
+    "file": "src/content/noticias/pt/lancamento-do-livro-diretrizes-nacionais-de-acoes-de-cidadania-das-ejes.md",
+    "title": "Lançamento do livro “Diretrizes Nacionais de Ações de Cidadania das EJEs”",
+    "orig": "https://nepps.org/2024/08/02/lancamento-do-livro-diretrizes-nacionais-de-acoes-de-cidadania-das-ejes/",
+    "chunks": 6,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 3,
-    "ourImgs": 3
+    "origImgs": 1,
+    "ourImgs": 1
   },
   {
     "file": "src/content/noticias/pt/membros-do-nepps-apresentam-pesquisas-no-xxxvi-cic-da-unesp-em-franca.md",
@@ -1816,6 +1815,17 @@
     "missingSamples": [],
     "origImgs": 2,
     "ourImgs": 2
+  },
+  {
+    "file": "src/content/noticias/pt/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs.md",
+    "title": "Membros do NEPPs compõem GT-14 do XIII EPED-UFS",
+    "orig": "https://nepps.org/2024/04/05/membros-do-nepps-compoem-gt-14-do-xiii-eped-ufs/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 3,
+    "ourImgs": 3
   },
   {
     "file": "src/content/noticias/pt/mensagem-de-fim-de-ano-feliz-natal-e-um-prospero-2024.md",
@@ -1884,6 +1894,17 @@
     "ourImgs": 1
   },
   {
+    "file": "src/content/noticias/pt/nepps-coordena-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim.md",
+    "title": "NEPPs coordenou mesa na XVIII Semana de Relações Internacionais da UNESP: Religião e Política se discutem sim!",
+    "orig": "https://nepps.org/2021/11/04/nepps-coordena-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
     "file": "src/content/noticias/pt/nepps-debate-conexao-entre-saberes-academicos-e-politicas-publicas-na-regiao-administrativa-de-franca.md",
     "title": "NEPPs debate conexão entre saberes acadêmicos e políticas públicas na Região Administrativa de Franca",
     "orig": "https://nepps.org/2026/04/30/nepps-debate-conexao-entre-saberes-academicos-e-politicas-publicas-na-regiao-administrativa-de-franca/",
@@ -1893,17 +1914,6 @@
     "missingSamples": [],
     "origImgs": 1,
     "ourImgs": 1
-  },
-  {
-    "file": "src/content/noticias/pt/nepps-estara-presente-no-iv-enepcp.md",
-    "title": "NEPPS marcou presença no IV ENEPCP que ocorreu em setembro de 2021",
-    "orig": "https://nepps.org/2021/06/13/nepps-estara-presente-no-iv-enepcp/",
-    "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 5,
-    "ourImgs": 4
   },
   {
     "file": "src/content/noticias/pt/nepps-em-destaque-no-vi-enepcp-tecnologia-direitos-e-participacao-cidada.md",
@@ -1917,15 +1927,15 @@
     "ourImgs": 2
   },
   {
-    "file": "src/content/noticias/pt/nepps-coordena-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim.md",
-    "title": "NEPPs coordenou mesa na XVIII Semana de Relações Internacionais da UNESP: Religião e Política se discutem sim!",
-    "orig": "https://nepps.org/2021/11/04/nepps-coordena-mesa-na-xviii-semana-de-relacoes-internacionais-da-unesp-religiao-e-politica-se-discutem-sim/",
-    "chunks": 7,
+    "file": "src/content/noticias/pt/nepps-estara-presente-no-iv-enepcp.md",
+    "title": "NEPPS marcou presença no IV ENEPCP que ocorreu em setembro de 2021",
+    "orig": "https://nepps.org/2021/06/13/nepps-estara-presente-no-iv-enepcp/",
+    "chunks": 8,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
+    "origImgs": 5,
+    "ourImgs": 4
   },
   {
     "file": "src/content/noticias/pt/nepps-fiscal-convida-para-submissao-de-trabalhos-no-xiv-eped-encontro-de-pesquisa-empirica-em-direito.md",
@@ -1961,10 +1971,10 @@
     "ourImgs": 0
   },
   {
-    "file": "src/content/noticias/pt/nepps-na-ii-jornadas-regionales-de-investigacion-en-educacion-superior.md",
-    "title": "NEPPs na II Jornadas Regionales de Investigación en Educación Superior",
-    "orig": "https://nepps.org/2021/10/27/nepps-na-ii-jornadas-regionales-de-investigacion-en-educacion-superior/",
-    "chunks": 4,
+    "file": "src/content/noticias/pt/nepps-marca-presenca-no-vii-sinapeq-em-sao-jose-dos-campos.md",
+    "title": "NEPPs marca presença no VII SINAPEQ, em São José dos Campos",
+    "orig": "https://nepps.org/2024/08/29/nepps-marca-presenca-no-vii-sinapeq-em-sao-jose-dos-campos/",
+    "chunks": 11,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -1983,6 +1993,17 @@
     "ourImgs": 0
   },
   {
+    "file": "src/content/noticias/pt/nepps-na-ii-jornadas-regionales-de-investigacion-en-educacion-superior.md",
+    "title": "NEPPs na II Jornadas Regionales de Investigación en Educación Superior",
+    "orig": "https://nepps.org/2021/10/27/nepps-na-ii-jornadas-regionales-de-investigacion-en-educacion-superior/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
     "file": "src/content/noticias/pt/nepps-participa-de-comite-tematico-junto-da-anepecp-e-tribunal-superior-eleitoral.md",
     "title": "NEPPS participa de comitê temático junto da ANEPECP e Tribunal Superior Eleitoral",
     "orig": "https://nepps.org/2021/12/28/nepps-participa-de-comite-tematico-junto-da-anepecp-e-tribunal-superior-eleitoral/",
@@ -1992,17 +2013,6 @@
     "missingSamples": [],
     "origImgs": 0,
     "ourImgs": 0
-  },
-  {
-    "file": "src/content/noticias/pt/nepps-marca-presenca-no-vii-sinapeq-em-sao-jose-dos-campos.md",
-    "title": "NEPPs marca presença no VII SINAPEQ, em São José dos Campos",
-    "orig": "https://nepps.org/2024/08/29/nepps-marca-presenca-no-vii-sinapeq-em-sao-jose-dos-campos/",
-    "chunks": 11,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
   },
   {
     "file": "src/content/noticias/pt/nepps-participa-do-iii-seminario-discente-do-iuperj-ucam.md",
@@ -2027,10 +2037,32 @@
     "ourImgs": 1
   },
   {
+    "file": "src/content/noticias/pt/o-acervo-digital-latino-americano-redalint-como-praxis-transformadora-da-producao-de-conhecimento.md",
+    "title": "O “Acervo Digital Latino-americano REDALINT” como práxis transformadora da produção de conhecimento",
+    "orig": "https://nepps.org/2021/11/29/o-acervo-digital-latino-americano-redalint-como-praxis-transformadora-da-producao-de-conhecimento/",
+    "chunks": 5,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 5,
+    "ourImgs": 5
+  },
+  {
     "file": "src/content/noticias/pt/o-fim-do-programa-bolsa-familia-e-a-volta-da-pobreza-extrema-no-brasil.md",
     "title": "O fim do Programa Bolsa Família e a volta da pobreza extrema no Brasil",
     "orig": "https://nepps.org/2021/11/08/o-fim-do-programa-bolsa-familia-e-a-volta-da-pobreza-extrema-no-brasil/",
     "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/noticias/pt/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes.md",
+    "title": "O NEPPs deseja um Feliz Natal e um próspero Ano Novo a todes!",
+    "orig": "https://nepps.org/2022/12/24/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes/",
+    "chunks": 1,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2049,21 +2081,10 @@
     "ourImgs": 2
   },
   {
-    "file": "src/content/noticias/pt/o-acervo-digital-latino-americano-redalint-como-praxis-transformadora-da-producao-de-conhecimento.md",
-    "title": "O “Acervo Digital Latino-americano REDALINT” como práxis transformadora da produção de conhecimento",
-    "orig": "https://nepps.org/2021/11/29/o-acervo-digital-latino-americano-redalint-como-praxis-transformadora-da-producao-de-conhecimento/",
-    "chunks": 5,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 5,
-    "ourImgs": 5
-  },
-  {
-    "file": "src/content/noticias/pt/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes.md",
-    "title": "O NEPPs deseja um Feliz Natal e um próspero Ano Novo a todes!",
-    "orig": "https://nepps.org/2022/12/24/o-nepps-deseja-um-feliz-natal-e-um-prospero-ano-novo-a-todes/",
-    "chunks": 1,
+    "file": "src/content/noticias/pt/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg.md",
+    "title": "O V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas acontece dos dias 4 a 6 de setembro em Belo Horizonte/MG",
+    "orig": "https://nepps.org/2023/03/09/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg/",
+    "chunks": 6,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2082,32 +2103,10 @@
     "ourImgs": 7
   },
   {
-    "file": "src/content/noticias/pt/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg.md",
-    "title": "O V Encontro Nacional de Ensino e Pesquisa do Campo de Públicas acontece dos dias 4 a 6 de setembro em Belo Horizonte/MG",
-    "orig": "https://nepps.org/2023/03/09/o-v-encontro-nacional-de-ensino-e-pesquisa-do-campo-de-publicas-acontece-dos-dias-4-a-6-de-setembro-em-belo-horizonte-mg/",
-    "chunks": 6,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/noticias/pt/ocorre-em-julho-dos-dias-15-ao-19-o-27o-congresso-mundial-de-ciencia-politica-em-buenos-aires-na-argentina.md",
     "title": "Ocorre em julho, dos dias 15 ao 19 o 27º Congresso Mundial de Ciência Política em Buenos Aires, na Argentina",
     "orig": "https://nepps.org/2022/12/23/ocorre-em-julho-dos-dias-15-ao-19-o-27o-congresso-mundial-de-ciencia-politica-em-buenos-aires-na-argentina/",
     "chunks": 3,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
-    "file": "src/content/noticias/pt/palestra-da-professora-regina-laisner-discutira-as-secretarias-municipais-de-relacoes-internacionais-no-brasil.md",
-    "title": "Palestra da professora Regina Laisner discutirá as Secretarias Municipais de Relações Internacionais no Brasil",
-    "orig": "https://nepps.org/2024/09/11/palestra-da-professora-regina-laisner-discutira-as-secretarias-municipais-de-relacoes-internacionais-no-brasil/",
-    "chunks": 7,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2124,6 +2123,17 @@
     "missingSamples": [],
     "origImgs": 0,
     "ourImgs": 0
+  },
+  {
+    "file": "src/content/noticias/pt/palestra-da-professora-regina-laisner-discutira-as-secretarias-municipais-de-relacoes-internacionais-no-brasil.md",
+    "title": "Palestra da professora Regina Laisner discutirá as Secretarias Municipais de Relações Internacionais no Brasil",
+    "orig": "https://nepps.org/2024/09/11/palestra-da-professora-regina-laisner-discutira-as-secretarias-municipais-de-relacoes-internacionais-no-brasil/",
+    "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
   },
   {
     "file": "src/content/noticias/pt/participacao-do-nepps-no-xiii-eped-na-universidade-federal-de-sergipe.md",
@@ -2148,17 +2158,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/pesquisadoras-vinculadas-ao-nepps-oferecem-minicurso-sobre-paradiplomacia-em-evento-da-universidade-federal-de-sergipe.md",
-    "title": "Pesquisadoras vinculadas ao NEPPs oferecem minicurso sobre paradiplomacia em evento da Universidade Federal de Sergipe",
-    "orig": "https://nepps.org/2021/11/10/pesquisadoras-vinculadas-ao-nepps-oferecem-minicurso-sobre-paradiplomacia-em-evento-da-universidade-federal-de-sergipe/",
-    "chunks": 3,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/noticias/pt/pesquisadoras-do-nepps-oferecem-minicurso-sobre-paradiplomacia-na-semana-de-ri.md",
     "title": "Pesquisadoras do NEPPs oferecem minicurso sobre paradiplomacia na Semana de RI",
     "orig": "https://nepps.org/2021/11/10/pesquisadoras-do-nepps-oferecem-minicurso-sobre-paradiplomacia-na-semana-de-ri/",
@@ -2170,10 +2169,32 @@
     "ourImgs": 2
   },
   {
+    "file": "src/content/noticias/pt/pesquisadoras-vinculadas-ao-nepps-oferecem-minicurso-sobre-paradiplomacia-em-evento-da-universidade-federal-de-sergipe.md",
+    "title": "Pesquisadoras vinculadas ao NEPPs oferecem minicurso sobre paradiplomacia em evento da Universidade Federal de Sergipe",
+    "orig": "https://nepps.org/2021/11/10/pesquisadoras-vinculadas-ao-nepps-oferecem-minicurso-sobre-paradiplomacia-em-evento-da-universidade-federal-de-sergipe/",
+    "chunks": 3,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
+  },
+  {
     "file": "src/content/noticias/pt/pesquisadores-do-nepps-marcam-presenca-no-encontro-nacional-de-pesquisa-empirica-em-direito.md",
     "title": "Pesquisadores do NEPPs marcam presença no Encontro Nacional de Pesquisa Empírica em Direito",
     "orig": "https://nepps.org/2025/09/04/pesquisadores-do-nepps-marcam-presenca-no-encontro-nacional-de-pesquisa-empirica-em-direito/",
     "chunks": 12,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 5,
+    "ourImgs": 5
+  },
+  {
+    "file": "src/content/noticias/pt/pesquisadores-do-nepps-unesp-destacam-se-em-conferencias-nacionais-e-internacionais-com-trabalhos-sobre-desenvolvimento-sustentavel-e-interseccionalidade.md",
+    "title": "Pesquisadores do NEPPs-UNESP destacam-se em conferências nacionais e internacionais com trabalhos sobre desenvolvimento sustentável e interseccionalidade",
+    "orig": "https://nepps.org/2025/08/05/pesquisadores-do-nepps-unesp-destacam-se-em-conferencias-nacionais-e-internacionais-com-trabalhos-sobre-desenvolvimento-sustentavel-e-interseccionalidade/",
+    "chunks": 17,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2192,28 +2213,6 @@
     "ourImgs": 2
   },
   {
-    "file": "src/content/noticias/pt/pesquisadores-do-nepps-unesp-destacam-se-em-conferencias-nacionais-e-internacionais-com-trabalhos-sobre-desenvolvimento-sustentavel-e-interseccionalidade.md",
-    "title": "Pesquisadores do NEPPs-UNESP destacam-se em conferências nacionais e internacionais com trabalhos sobre desenvolvimento sustentável e interseccionalidade",
-    "orig": "https://nepps.org/2025/08/05/pesquisadores-do-nepps-unesp-destacam-se-em-conferencias-nacionais-e-internacionais-com-trabalhos-sobre-desenvolvimento-sustentavel-e-interseccionalidade/",
-    "chunks": 17,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 5,
-    "ourImgs": 5
-  },
-  {
-    "file": "src/content/noticias/pt/processo-seletivo-do-programa-de-mestrado-porfissional-da-fchs-de-planejamento-e-analise-de-politicas-publicas-prorroga-inscricoes-ate-04-09.md",
-    "title": "Processo Seletivo do Programa de Mestrado Porfissional da FCHS de Planejamento e Análise de Políticas Públicas prorroga inscrições até 04/09",
-    "orig": "https://nepps.org/2022/09/05/processo-seletivo-do-programa-de-mestrado-porfissional-da-fchs-de-planejamento-e-analise-de-politicas-publicas-prorroga-inscricoes-ate-04-09/",
-    "chunks": 4,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
-    "ourImgs": 1
-  },
-  {
     "file": "src/content/noticias/pt/poeta-francano-carlos-de-assumpcao-recebe-titulo-de-doutor-honoris-causa.md",
     "title": "Poeta francano Carlos de Assumpção recebe título de “Doutor Honoris Causa”",
     "orig": "https://nepps.org/2021/11/18/poeta-francano-carlos-de-assumpcao-recebe-titulo-de-doutor-honoris-causa/",
@@ -2229,6 +2228,17 @@
     "title": "Pesquisadora do NEPPs defende Mestrado sobre Políticas de Gênero pelo Programa Erasmus",
     "orig": "https://nepps.org/2024/10/21/priscila-rosso-defende-mestrado-com-estudo-inovador-sobre-politicas-de-genero-em-cidades-intermediarias/",
     "chunks": 7,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
+    "file": "src/content/noticias/pt/processo-seletivo-do-programa-de-mestrado-porfissional-da-fchs-de-planejamento-e-analise-de-politicas-publicas-prorroga-inscricoes-ate-04-09.md",
+    "title": "Processo Seletivo do Programa de Mestrado Porfissional da FCHS de Planejamento e Análise de Políticas Públicas prorroga inscrições até 04/09",
+    "orig": "https://nepps.org/2022/09/05/processo-seletivo-do-programa-de-mestrado-porfissional-da-fchs-de-planejamento-e-analise-de-politicas-publicas-prorroga-inscricoes-ate-04-09/",
+    "chunks": 4,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2258,6 +2268,17 @@
     "ourImgs": 1
   },
   {
+    "file": "src/content/noticias/pt/prorrogacao-de-inscricoes-para-a-2a-diplomatura-de-extensao-gestao-da-internacionalizacao-universitaria-latinoamericana.md",
+    "title": "Prorrogação de inscrições para a 2ª Diplomatura de Extensão Gestão da Internacionalização Universitária Latinoamericana",
+    "orig": "https://nepps.org/2024/07/31/prorrogacao-de-inscricoes-para-a-2a-diplomatura-de-extensao-gestao-da-internacionalizacao-universitaria-latinoamericana/",
+    "chunks": 4,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 1,
+    "ourImgs": 1
+  },
+  {
     "file": "src/content/noticias/pt/redalint-celebra-10-anos-com-evento-online-dedicado-a-internacionalizacao-da-educacao-superior.md",
     "title": "REDALINT Celebra 10 Anos com Evento Online Dedicado à Internacionalização da Educação Superior",
     "orig": "https://nepps.org/2025/11/24/redalint-celebra-10-anos-com-evento-online-dedicado-a-internacionalizacao-da-educacao-superior/",
@@ -2269,10 +2290,10 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/prorrogacao-de-inscricoes-para-a-2a-diplomatura-de-extensao-gestao-da-internacionalizacao-universitaria-latinoamericana.md",
-    "title": "Prorrogação de inscrições para a 2ª Diplomatura de Extensão Gestão da Internacionalização Universitária Latinoamericana",
-    "orig": "https://nepps.org/2024/07/31/prorrogacao-de-inscricoes-para-a-2a-diplomatura-de-extensao-gestao-da-internacionalizacao-universitaria-latinoamericana/",
-    "chunks": 4,
+    "file": "src/content/noticias/pt/resenha-da-obra-secretarias-municipais-de-relacoes-internacionais-no-brasil-um-mapeamento-nacional-e-publicada-em-revista-internacional.md",
+    "title": "Resenha da obra “Secretarias Municipais de Relações Internacionais no Brasil: um mapeamento nacional” é publicada em revista internacional",
+    "orig": "https://nepps.org/2024/07/18/resenha-da-obra-secretarias-municipais-de-relacoes-internacionais-no-brasil-um-mapeamento-nacional-e-publicada-em-revista-internacional/",
+    "chunks": 8,
     "missing": 0,
     "missingPct": 0,
     "missingSamples": [],
@@ -2288,17 +2309,6 @@
     "missingPct": 0,
     "missingSamples": [],
     "origImgs": 5,
-    "ourImgs": 2
-  },
-  {
-    "file": "src/content/noticias/pt/resenha-da-obra-secretarias-municipais-de-relacoes-internacionais-no-brasil-um-mapeamento-nacional-e-publicada-em-revista-internacional.md",
-    "title": "Resenha da obra “Secretarias Municipais de Relações Internacionais no Brasil: um mapeamento nacional” é publicada em revista internacional",
-    "orig": "https://nepps.org/2024/07/18/resenha-da-obra-secretarias-municipais-de-relacoes-internacionais-no-brasil-um-mapeamento-nacional-e-publicada-em-revista-internacional/",
-    "chunks": 8,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 1,
     "ourImgs": 1
   },
   {
@@ -2379,17 +2389,6 @@
     "ourImgs": 1
   },
   {
-    "file": "src/content/noticias/pt/unesp-promove-conversa-sobre-cidadania-da-lingua-na-casa-de-portugal-em-sao-paulo.md",
-    "title": "UNESP promove conversa sobre “Cidadania da Língua” na Casa de Portugal em São Paulo",
-    "orig": "https://nepps.org/2024/07/04/unesp-promove-conversa-sobre-cidadania-da-lingua-na-casa-de-portugal-em-sao-paulo/",
-    "chunks": 13,
-    "missing": 0,
-    "missingPct": 0,
-    "missingSamples": [],
-    "origImgs": 0,
-    "ourImgs": 0
-  },
-  {
     "file": "src/content/noticias/pt/unesp-fortalece-a-valorizacao-da-memoria-negra-com-exposicao-franca-afrorota-e-inauguracao-da-praca-da-rebeldia.md",
     "title": "UNESP fortalece a valorização da memória negra com exposição Franca AfroRota e inauguração da Praça da Rebeldia",
     "orig": "https://nepps.org/2026/06/12/unesp-fortalece-a-valorizacao-da-memoria-negra-com-exposicao-franca-afrorota-e-inauguracao-da-praca-da-rebeldia/",
@@ -2399,6 +2398,17 @@
     "missingSamples": [],
     "origImgs": 2,
     "ourImgs": 2
+  },
+  {
+    "file": "src/content/noticias/pt/unesp-promove-conversa-sobre-cidadania-da-lingua-na-casa-de-portugal-em-sao-paulo.md",
+    "title": "UNESP promove conversa sobre “Cidadania da Língua” na Casa de Portugal em São Paulo",
+    "orig": "https://nepps.org/2024/07/04/unesp-promove-conversa-sobre-cidadania-da-lingua-na-casa-de-portugal-em-sao-paulo/",
+    "chunks": 13,
+    "missing": 0,
+    "missingPct": 0,
+    "missingSamples": [],
+    "origImgs": 0,
+    "ourImgs": 0
   },
   {
     "file": "src/content/noticias/pt/unesp-sedia-coloquio-de-raca-e-interseccionalidades-com-organizacao-do-nepps-e-intensa-programacao-cultural.md",
