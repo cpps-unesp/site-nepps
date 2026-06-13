@@ -48,6 +48,14 @@ export default function rehypeBaseUrl({ base = '/' } = {}) {
           if (node.tagName === 'img') images.push(node);
         }
       }
+      // HTML cru preservado pelo conversor (blocos do Gutenberg: media-text,
+      // galerias, colunas) não vira elemento da árvore — prefixa via regex.
+      if (node.type === 'raw' && typeof node.value === 'string' && prefix) {
+        node.value = node.value.replace(
+          /\b(src|href)="(\/(?!\/)[^"]*)"/g,
+          (m, attr, url) => `${attr}="${rewrite(url)}"`,
+        );
+      }
       for (const child of node.children ?? []) visit(child);
     };
     visit(tree);
