@@ -1,0 +1,38 @@
+---
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { LANGUAGES, type Lang } from '~/i18n/translations';
+import { localizedPath } from '~/utils/paths';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const p = (s: string) => localizedPath(lang, s);
+
+const opcoes = [
+  { titulo: 'Atual (publicada)', desc: 'Hero foto fullscreen + Em destaque + Notícias.', href: p('') },
+  { titulo: 'Institucional moderno', desc: 'Hero em gradiente, números, eixos e parcerias.', href: p('home-institucional') },
+  { titulo: 'Vitrine bento', desc: 'Mosaico colorido de seções + notícias.', href: p('home-bento') },
+  { titulo: 'Minimalista acadêmico', desc: 'Logo, destaque único e lista enxuta.', href: p('home-minimal') },
+];
+---
+
+<BaseLayout lang={lang} title="Previews de home" pathInLang="previews" noindex>
+  <div class="container mx-auto px-4 py-16 max-w-3xl">
+    <h1 class="text-3xl md:text-4xl font-bold text-accent">Protótipos de home</h1>
+    <p class="opacity-80 mt-3">Comparativo das propostas. A home publicada não foi alterada.</p>
+    <ul class="mt-8 grid gap-4 list-none p-0">
+      {opcoes.map((o) => (
+        <li>
+          <a href={o.href} class="flex items-center justify-between gap-4 bg-base-100 border border-base-300 rounded-box p-5 hover:shadow-md transition-shadow">
+            <span>
+              <span class="font-display text-lg font-bold text-primary block">{o.titulo}</span>
+              <span class="opacity-70 text-sm">{o.desc}</span>
+            </span>
+            <span class="text-primary shrink-0">→</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</BaseLayout>

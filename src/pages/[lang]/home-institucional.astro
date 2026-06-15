@@ -1,0 +1,131 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+import { assetPath, localizedPath } from '~/utils/paths';
+import { entrySlug } from '~/utils/content';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const p = (s: string) => localizedPath(lang, s);
+
+const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const ultimas = noticias.slice(0, 3);
+const fmt = (d: Date) => new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(d);
+
+const eixos = [
+  {
+    titulo: 'Desenvolvimento',
+    texto: 'Políticas públicas voltadas à efetivação e universalização dos direitos de cidadania.',
+    icon: 'M3 3v18h18 M7 14l4-4 3 3 5-6',
+  },
+  {
+    titulo: 'Democracia',
+    texto: 'Espaços de participação que dão voz aos diversos atores em todas as etapas da política.',
+    icon: 'M17 20h5v-2a3 3 0 0 0-5.4-1.8 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M3 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2',
+  },
+  {
+    titulo: 'Justiça',
+    texto: 'Reconhecimento dos diversos interesses numa ampla perspectiva de democracia aliada à justiça.',
+    icon: 'M12 3v18 M5 7h14 M5 7l-2 6a4 4 0 0 0 8 0L9 7 M19 7l-2 6a4 4 0 0 0 8 0l-2-6',
+  },
+];
+
+const stats = [
+  { num: '2011', label: 'Desde' },
+  { num: '5', label: 'Linhas de pesquisa' },
+  { num: `${noticias.length}`, label: 'Notícias publicadas' },
+  { num: '3', label: 'Eixos estruturantes' },
+];
+
+const logo = `${import.meta.env.BASE_URL}imagens/wp/nepps-logo-principal-negativo-1024x1024.jpg`.replace(/\/+/g, '/');
+---
+
+<BaseLayout lang={lang} title="Home — Institucional moderno (preview)" pathInLang="home-institucional" noindex>
+  <!-- HERO gradiente da marca -->
+  <section class="relative overflow-hidden" style="background-image: linear-gradient(120deg, #2c0963 0%, #4b1a8f 55%, #00afef 140%)">
+    <div class="container mx-auto px-4 py-20 md:py-28 grid md:grid-cols-[1.3fr_1fr] gap-10 items-center text-white">
+      <div>
+        <p class="uppercase tracking-[0.2em] text-secondary font-semibold text-sm">UNESP · Franca</p>
+        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-3 text-balance">
+          {t(lang, 'site.name_full')}
+        </h1>
+        <p class="mt-6 text-lg text-white/85 max-w-xl">{t(lang, 'home.about_body')}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a class="btn btn-lg bg-white text-primary border-none hover:bg-base-200" href={p('institucional')}>{t(lang, 'home.cta_sobre')}</a>
+          <a class="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-primary" href={p('pesquisas')}>{t(lang, 'home.cta_pesquisas')}</a>
+        </div>
+      </div>
+      <div class="hidden md:flex justify-center">
+        <img src={logo} alt="NEPPs" width="320" height="320" class="w-72 h-72 object-contain rounded-2xl shadow-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="bg-base-100 border-b border-base-300">
+    <div class="container mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      {stats.map((s) => (
+        <div>
+          <p class="font-display text-4xl md:text-5xl font-extrabold text-accent">{s.num}</p>
+          <p class="uppercase tracking-wide text-sm opacity-70 mt-1">{s.label}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- EIXOS -->
+  <section class="py-16 md:py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h2 class="section-title text-3xl md:text-4xl text-primary">Eixos estruturantes</h2>
+        <div class="section-divider mx-auto mt-4"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        {eixos.map((e) => (
+          <article class="bg-base-100 rounded-box p-8 shadow-sm border-t-4 border-accent">
+            <div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={e.icon} /></svg>
+            </div>
+            <h3 class="font-display text-xl font-bold mt-5 text-primary">{e.titulo}</h3>
+            <p class="opacity-80 mt-2">{e.texto}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTÍCIAS -->
+  <section class="py-16 md:py-20 bg-base-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="section-title text-2xl md:text-3xl text-primary">{t(lang, 'news.title')}</h2>
+        <a class="link link-primary text-sm" href={p('noticias')}>{t(lang, 'home.news_more')} →</a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3 mt-8">
+        {ultimas.map((n) => (
+          <a href={p(`noticias/${entrySlug(n)}`)} class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            {n.data.image && <img src={assetPath(n.data.image)} alt="" class="w-full aspect-[16/9] object-cover" loading="lazy" />}
+            <div class="p-5">
+              <p class="text-[11px] uppercase tracking-wide font-bold opacity-60">{n.data.tags[0] ?? ''} · {fmt(n.data.date)}</p>
+              <h3 class="font-display font-bold leading-snug mt-2 line-clamp-3">{n.data.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTITUIÇÕES (texto, sem logos) -->
+  <section class="py-12 bg-primary text-primary-content">
+    <div class="container mx-auto px-4 text-center">
+      <p class="section-title text-lg">Parcerias & apoios institucionais</p>
+      <p class="mt-3 opacity-85 max-w-3xl mx-auto">UFPR · UnB · UFS · UNIVAP · IUPERJ · FoMerco · ANEPECP · Redalint · LabRI/UNESP</p>
+      <a class="btn btn-sm bg-white text-primary border-none mt-6" href={p('parcerias')}>Ver parcerias</a>
+    </div>
+  </section>
+</BaseLayout>
