@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '~/layouts/BaseLayout.astro';
+import { LANGUAGES, t, type Lang } from '~/i18n/translations';
+import { assetPath, localizedPath } from '~/utils/paths';
+import { entrySlug } from '~/utils/content';
+
+export function getStaticPaths() {
+  return LANGUAGES.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const p = (s: string) => localizedPath(lang, s);
+
+const noticias = (await getCollection('noticias', (e) => e.data.lang === lang)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const ultimas = noticias.slice(0, 4);
+const fmt = (d: Date) => new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' }).format(d);
+
+// blocos do mosaico (bento) com tamanhos variados e cores da marca
+const tiles = [
+  { label: 'Pesquisas', href: p('pesquisas'), cls: 'md:col-span-2 md:row-span-2 bg-primary text-primary-content', big: true,
+    icon: 'M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2 M9 3h6v4H9z M9 12h6 M9 16h6' },
+  { label: 'Publicações', href: p('publicacoes'), cls: 'bg-secondary text-secondary-content',
+    icon: 'M4 19.5A2.5 2.5 0 0 1 6.5 17H20 M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z' },
+  { label: 'Observatório de Políticas Públicas', href: p('observatorio-de-politicas-publicas'), cls: 'bg-accent text-accent-content',
+    icon: 'M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z' },
+  { label: 'Eventos & Seminários', href: p('outros-eventos'), cls: 'bg-base-300 text-base-content',
+    icon: 'M8 2v4 M16 2v4 M3 10h18 M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z' },
+  { label: 'Equipe', href: p('equipe'), cls: 'bg-warning text-warning-content',
+    icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75' },
+];
+---
+
+<BaseLayout lang={lang} title="Home — Vitrine bento (preview)" pathInLang="home-bento" noindex>
+  <section class="py-12 md:py-16 bg-base-100">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <p class="uppercase tracking-[0.2em] text-secondary font-semibold text-sm text-center">NEPPs · UNESP Franca</p>
+      <h1 class="font-display text-3xl md:text-5xl font-extrabold text-primary text-center mt-2 text-balance">
+        {t(lang, 'site.name_full')}
+      </h1>
+
+      <!-- MOSAICO BENTO -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-[150px] gap-4 mt-10">
+        {tiles.map((tile) => (
+          <a href={tile.href} class={`group relative overflow-hidden rounded-box p-6 flex flex-col justify-between transition-transform hover:-translate-y-1 ${tile.cls}`}>
+            <svg class="opacity-80" width={tile.big ? 48 : 32} height={tile.big ? 48 : 32} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={tile.icon} /></svg>
+            <span class={`section-title ${tile.big ? 'text-2xl md:text-3xl' : 'text-lg'} leading-tight`}>{tile.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTÍCIAS -->
+  <section class="py-16 md:py-20 bg-base-200">
+    <div class="container mx-auto px-4 max-w-6xl">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="section-title text-2xl md:text-3xl text-primary">{t(lang, 'news.title')}</h2>
+          <p class="opacity-70 mt-1">{t(lang, 'home.news_subtitle')}</p>
+        </div>
+        <a class="link link-primary text-sm" href={p('noticias')}>{t(lang, 'home.news_more')} →</a>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-8">
+        {ultimas.map((n) => (
+          <a href={p(`noticias/${entrySlug(n)}`)} class="card bg-base-100 border border-base-300 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+            {n.data.image && <img src={assetPath(n.data.image)} alt="" class="w-full aspect-[16/9] object-cover" loading="lazy" />}
+            <div class="p-4">
+              <p class="text-[11px] uppercase tracking-wide font-bold opacity-60">{fmt(n.data.date)}</p>
+              <h3 class="font-display text-sm font-bold leading-snug mt-1 line-clamp-3">{n.data.title}</h3>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
