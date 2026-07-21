@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.0",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/rss": "^4.0.19",
     "@fontsource/open-sans": "^5.2.7",
     "@fontsource/raleway": "^5.2.8",
     "@tailwindcss/vite": "4.1.18",
